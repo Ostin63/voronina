@@ -6,22 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фотограф и стилист Дарья Воронина"</title>
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/less.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="container">
-      <p class="logo">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo.png">
-          <source media="(min-width: 764px)" srcset="img/logo-plan.png">
-          <img src="img/logo-mobil.png" width="112" height="33" alt="Логотип фотографа Дарьи Ворониной">
-        </picture>
-      </p>
-      <nav class="main-navigation container">
-        <div class="main-middle">
+  <header class="header">
+    <div class="main-header container">
+        <nav class="main-navigation">
+          <p class="logo">
+            <!--<picture>
+              <source media="(min-width: 1440px)" srcset="img/logo.png">
+              <source media="(min-width: 764px)" srcset="img/logo-plan.png">
+              <img src="img/logo-mobil.png" width="112" height="33" alt="Логотип фотографа Дарьи Ворониной">
+            </picture>-->
+          </p>
+          <div class="menu">
+            <div class="menu-bar menu-bar-top"></div>
+            <div class="menu-bar menu-bar-middle"></div>
+            <div class="menu-bar menu-bar-bottom"></div>
+          </div>
           <ul class="site-navigation">
             <li><a href="#block-2">Обо мне</a></li>
             <li><a href="#block-3">Стоимость</a></li>
@@ -30,21 +34,22 @@
           <div class="phone">
             <a href="tel:+79166677112">+ 7 916 66 77 112</a>
           </div>
-        </div>
-      </nav>
-      <div class="">
-        <div class="">
+        </nav>
+      <div class="top-list">
+        <div class="photograph">
           <h2>Дарья Воронина</h2>
           <p>Food — фотограф и food — стилист в Москве и Московской области</p>
           <a class="button" href="#nowhere">Портфолио</a>
-          <a class="button" href="#nowhere">Instagram</a>
-          <a class="button" href="#nowhere">Facebook</a>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/daria.jpg">
-            <source media="(min-width: 764px)" srcset="img/daria-plan.jpg">
-            <img src="img/daria-mobil.jpg" width="320" height="480" alt="Фото Дарьи Ворониной">
-          </picture>
+          <p class="social-button">
+            <a class="button" href="#nowhere">Instagram</a>
+            <a class="button" href="#nowhere">Facebook</a>
+          </p>
         </div>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/daria.jpg">
+          <source media="(min-width: 764px)" srcset="img/daria-plan.jpg">
+          <img class="visually-hidden" src="img/daria-mobil.jpg" width="320" height="480" alt="Фото Дарьи Ворониной">
+        </picture>
       </div>
       <div class="modal-top-menu">
         <ul class="top-modal-menu">
@@ -56,7 +61,7 @@
       </div>
     </div>
   </header>
-  <main>
+ <!-- <main>
     <h1 class="visually-hidden">Фотограф и стилист Дарья Воронина</h1>
     <section class="features" id="block-1">
       <h3>Портфолио</h3>
@@ -283,13 +288,14 @@
 	c-1.062,3.491-8.044,21.4-5.919,27.623c2.125,6.223,16.847,19.427,34.604-4.857c17.758-24.284,7.93-50.389-6.981-59.951
 	c-10.654-6.831-36.547-14.316-55.397,6.982c-23.373,26.409-2.732,49.175-2.732,49.175l-5.464,12.749c0,0-22.159-4.401-20.186-36.881
 	c1.973-32.48,32.783-52.969,61.62-52.817c28.837,0.152,48.568,15.633,57.522,38.55C188.575,105.929,173.852,138.864,155.336,148.425
-	z" />
+  z" />
             </svg>
           </a>
         </li>
       </ul>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
 </body>
 
 </html>
