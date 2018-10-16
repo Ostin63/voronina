@@ -1,32 +1,23 @@
 // Mode: mobil
 @mobil: ~"(min-width: 320px)";
-@tablet-container: 290px;
-
+@mobil-container: 290px;
 // Mode: Tablet
 @tablet: ~"(min-width: 764px)";
 @tablet-container: 764px;
-
 // Mode: Desktop
 @desktop: ~"(min-width: 1440px)";
 @desktop-container: 1440px;
-
 // container  site
 .container {
   margin-left: auto;
   margin-right: auto;
-
-
-@media (min-width: @mobil) {
-  
+  @media (min-width: @mobil) {
     width: @mobil-container;
-  
-}
-
-@media @tablet {
-    width: @tablet-area;
   }
-
+  @media @tablet {
+    width: @tablet-container;
+  }
   @media @desktop {
-    width: @desktop-area;
+    width: @desktop-container;
   }
 }
