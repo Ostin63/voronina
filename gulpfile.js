@@ -71,23 +71,11 @@ gulp.task("html:update",
 
 gulp.task("serve", function () {
   server.init({
-    server: "build/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
+    server: "build/", notify: false, open: true, cors: true, ui: false });
 
   gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html", ["html:update"]);
 });
 
 gulp.task("build", function (done) {
-  run(
-    "clean",
-    "copy",
-    "style",
-    "images",
-    done
-  );
-});
+  run("clean", "copy", "style", "images", done);});

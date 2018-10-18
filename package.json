@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "editorconfig-cli",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,18 @@
     "run-sequence": "^2.2.1",
     "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
-    "del": "^3.0.0"
+    "del": "^3.0.0",
+    "gulp-less": "^4.0.1"
+  },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.less"
+  ],
+  "engines": {
+    "node": "6.10"
   }
 }
