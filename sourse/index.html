@@ -11,231 +11,130 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="main-header container">
-        <nav class="main-navigation">
-          <p class="logo">
-            <!--<picture>
-              <source media="(min-width: 1440px)" srcset="img/logo.png">
-              <source media="(min-width: 764px)" srcset="img/logo-plan.png">
-              <img src="img/logo-mobil.png" width="112" height="33" alt="Логотип фотографа Дарьи Ворониной">
-            </picture>-->
-          </p>
-          <div class="menu">
-            <div class="menu-bar menu-bar-top"></div>
-            <div class="menu-bar menu-bar-middle"></div>
-            <div class="menu-bar menu-bar-bottom"></div>
-          </div>
-          <ul class="site-navigation">
-            <li><a href="#block-2">Обо мне</a></li>
-            <li><a href="#block-3">Стоимость</a></li>
-            <li><a href="#block-4">Контакты</a></li>
-          </ul>
-          <div class="phone">
-            <a href="tel:+79166677112">+ 7 916 66 77 112</a>
-          </div>
-        </nav>
-      <div class="top-list">
-        <div class="photograph">
-          <h2>Дарья Воронина</h2>
-          <p>Food — фотограф и food — стилист в Москве и Московской области</p>
-          <a class="button" href="#nowhere">Портфолио</a>
-          <p class="social-button">
-            <a class="button" href="#nowhere">Instagram</a>
-            <a class="button" href="#nowhere">Facebook</a>
-          </p>
-        </div>
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/daria.jpg">
-          <source media="(min-width: 764px)" srcset="img/daria-plan.jpg">
-          <img class="visually-hidden" src="img/daria-mobil.jpg" width="320" height="480" alt="Фото Дарьи Ворониной">
-        </picture>
-      </div>
-      <div class="modal-top-menu">
-        <ul class="top-modal-menu">
-          <li><a href="#block-1">Портфолио</a></li>
-          <li><a href="#block-2">Обо мне</a></li>
-          <li><a href="#block-3">Стоимость</a></li>
-          <li><a href="#block-4">Контакты</a></li>
+
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <p class="page-header__logo">
+        <img class="page-header__logo-img" src="img/logo-mobil.png" width="112" height="33" alt="Логотип фотографа Дарьи Ворониной">
+      </p>
+      <nav class="main-nav">
+        <button class="main-nav__toggle button"></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="#">Портфолио</a></li>
+          <li class="site-list__item"><a href="#block-2">Обо мне</a></li>
+          <li class="site-list__item"><a href="#block-3">Стоимость</a></li>
+          <li class="site-list__item"><a href="#block-4">Контакты</a></li>
         </ul>
+      </nav>
+      <div class="page-header__top-site top-site">
+        <h2>Дарья Воронина</h2>
+        <p class="top-site__slogan">Food — фотограф и food — стилист в Москве и Московской области</p>
+        <button class="button" href="#nowhere">Портфолио</button>
       </div>
     </div>
   </header>
- <!-- <main>
+  <main class="page-main">
     <h1 class="visually-hidden">Фотограф и стилист Дарья Воронина</h1>
-    <section class="features" id="block-1">
+
+    <section class="portfolio" id="block-1">
+      <div class="portfolio__wrapper">
       <h3>Портфолио</h3>
-      <ul class="">
-        <li class="">
-          <p>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/ledi.jpg">
-              <source media="(min-width: 764px)" srcset="img/ledi-plan.jpg">
-              <img src="img/ledi-mobil.jpg" width="290" height="374" alt="Фото контент для социальных сетей кондитерской «Леди Мармелад">
-            </picture>
-          </p>
-          <a href="#nowhere">#соцсети</a>
+      <ul class="portfolio__list">
+        <li class="portfolio__item">
           <p>Фото контент для социальных сетей кондитерской «Леди Мармелад»</p>
-        </li>
-        <li class="">
-          <p>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/funky.jpg">
-              <source media="(min-width: 764px)" srcset="img/funky-plan.jpg">
-              <img src="img/funky-mobil.jpg" width="290" height="374" alt="Фото контент для инстаграма ресторана «Funky Food">
-            </picture>
-          </p>
+          <img class="portfolio__item--img" src="img/ledi-mobil.jpg" width="290" height="374" alt="Фото контент для социальных сетей кондитерской «Леди Мармелад">
           <a href="#nowhere">#соцсети</a>
+        </li>
+        <li class="portfolio__item">
           <p>Фото контент для инстаграма ресторана «Funky Food»</p>
-        </li>
-        <li class="">
-          <p>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/good.jpg">
-              <source media="(min-width: 764px)" srcset="img/good-plan.jpg">
-              <img src="img/good-mobil.jpg" width="290" height="374" alt="Съемка меню ресторана «Хорошая еда»">
-            </picture>
-          </p>
+          <img class="portfolio__item--img" src="img/funky-mobil.jpg" width="290" height="374" alt="Фото контент для инстаграма ресторана «Funky Food">
           <a href="#nowhere">#соцсети</a>
+        </li>
+        <li class="portfolio__item">
           <p>Съемка меню ресторана «Хорошая еда»</p>
-        </li>
-        <li class="">
-          <p>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/brunch.jpg">
-              <source media="(min-width: 764px)" srcset="img/brunch-plan.jpg">
-              <img src="img/brunch-mobil.jpg" width="290" height="374" alt="Съемка для баннерной рекламной печати ресторана «Бранч">
-            </picture>
-          </p>
+          <img class="portfolio__item--img" src="img/good-mobil.jpg" width="290" height="374" alt="Съемка меню ресторана «Хорошая еда»">
           <a href="#nowhere">#соцсети</a>
-          <p>Съемка для баннерной рекламной печати ресторана «Бранч» </p>
+        </li>
+        <li class="portfolio__item">
+          <p>Съемка для баннерной рекламной печати ресторана «Бранч»</p>
+          <img class="portfolio__item--img" src="img/brunch-mobil.jpg" width="290" height="374" alt="Съемка для баннерной рекламной печати ресторана «Бранч">
+          <a href="#nowhere">#соцсети</a>
         </li>
       </ul>
-      <div class="">
-        <p>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/pdf.jpg">
-            <source media="(min-width: 764px)" srcset="img/pdf-plan.jpg">
-            <img src="img/pdf-mobil.jpg" width="320" height="298" alt="Фото меню">
-          </picture>
-        </p>
+      <div class="portfolio__bottom">
         <h3>Подробное портфолио</h3>
         <p>С описанием задач заказчика, полного процесса работы и финальным результатом </p>
-        <a class="button" href="#nowhere">Скачать в pdf</a>
+        <a class="portfolio__bottom--toggle button" href="#nowhere">Скачать в pdf</a>
+      </div>
       </div>
     </section>
+
     <section class="promo" id="block-2">
-      <div class="container">
+      <div class="promo__wrapper">
         <h3>Обо мне</h3>
-        <ul class="studio-item">
-          <li>
-            <p>
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/foto-left.jpg">
-                <source media="(min-width: 764px)" srcset="img/foto-left-plan.jpg">
-                <img src="img/foto-left-mobil.jpg" width="165" height="307" alt="Фото блюда">
-              </picture>
-            </p>
-          </li>
-          <li>
-            <p>
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/foto-right.jpg">
-                <source media="(min-width: 764px)" srcset="img/foto-right-plan.jpg">
-                <img src="img/foto-right-mobil.jpg" width="145" height="307" alt="Фото блюда">
-              </picture>
-            </p>
-          </li>
-          <li>
-            <p>Во всех фотосъемках еды, я работаю как фуд-фотограф и фуд-стилист. Создаю креативные концепции, реализую
-              ваши идеи. Разрабатываю рецепты, вкусно снимаю. Провожу обучение</p>
-          </li>
-          <li>
-            <p>Всегда открыта к сотрудничеству и рада новым предложениям </p>
-          </li>
-          <li>
-            <a class="button" href="tel:+79166677112">Mail: daria.voronina@gmail.com</a>
-          </li>
-          <li>
-            <a class="button" href="tel:+79166677112">Tel.: + 7 916 66 77 112</a>
-          </li>
-          <li>
-            <a class="button" href="#nowhere">Работать со мной</a>
-          </li>
-        </ul>
+        <p>
+          <img src="img/foto-left-mobil.jpg" width="165" height="307" alt="Фото блюда">
+          <img src="img/foto-right-mobil.jpg" width="145" height="307" alt="Фото блюда">
+        </p>
+        <p>Во всех фотосъемках еды, я работаю как фуд-фотограф и фуд-стилист. Создаю креативные концепции, реализую
+          ваши идеи. Разрабатываю рецепты, вкусно снимаю. Провожу обучение</p>
+        <p>Всегда открыта к сотрудничеству и рада новым предложениям </p>
+        <a class="button" href="tel:+79166677112">Tel.: + 7 916 66 77 112</a>
+        <button class="button" href="#nowhere">Работать со мной</button>
       </div>
     </section>
+
     <section class="price" id="block-3">
+      <div class="price__wrapper">
       <h3 class="">Стоимость</h3>
-      <ul class="">
-        <li class="">
-          <p>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/food-1.jpg">
-              <source media="(min-width: 764px)" srcset="img/food-1-plan.jpg">
-              <img src="img/food-1-mobil.jpg" width="290" height="381" alt="Фото блюда">
-            </picture>
-          </p>
-          <b>12 часов съемки</b>
-          <p>30 000 рублей</p>
+      <ul class="price__list">
+        <li class="price__item">
+          <img class="price__item--img" src="img/food-1-mobil.jpg" width="290" height="381" alt="Фото блюда">
+          <b class="priae__item--time">12 часов съемки</b>
+          <p class="price__item--cash">30 000 рублей</p>
           <p>Подготовка к съемке от 1 недели Предварительный дизайн — проект Food - стилизация Расширенный реквизит
             Цветокоррекция и пост-обработка Результаты в течение 3-х дней</p>
         </li>
-        <li class="">
-          <p>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/food-2.jpg">
-              <source media="(min-width: 764px)" srcset="img/food-2-plan.jpg">
-              <img src="img/food-2-mobil.jpg" width="290" height="381" alt="Фото блюда">
-            </picture>
-          </p>
-          <b>4 часа съемки</b>
-          <p>15 000 рублей</p>
+        <li class="price__item">
+          <img class="price__item--img" src="img/food-2-mobil.jpg" width="290" height="381" alt="Фото блюда">
+          <b class="priae__item--time">4 часа съемки</b>
+          <p class="price__item--cash">15 000 рублей</p>
           <p>Подготовка к съемке - 1 день Food - стилизация Использование реквизита Цветокоррекция и постобработка
             Результаты в течение 3-х дней</p>
         </li>
-        <li class="">
-          <p>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/food-3.jpg">
-              <source media="(min-width: 764px)" srcset="img/food-3-plan.jpg">
-              <img src="img/food-3-mobil.jpg" width="290" height="381" alt="Фото блюда">
-            </picture>
-          </p>
-          <b>1 час съемки</b>
-          <p>4 000 рублей</p>
+        <li class="price__item">
+          <img class="price__item--img" src="img/food-3-mobil.jpg" width="290" height="381" alt="Фото блюда">
+          <b class="priae__item--time">1 час съемки</b>
+          <p class="price__item--cash">4 000 рублей</p>
           <p>Food - стилизация Использование реквизита Цветокоррекция Результаты в течение 5-х дней</p>
         </li>
       </ul>
+      </div>
     </section>
   </main>
 
-  <footer class="main-footer" id="block-4">
-    <section class="contacts">
-      <div class="container">
-        <div class="contacts-nerds">
-          <h3>Свяжитесь со мной</h3>
-          <ul class="contact">
-            <li class="">
-              <p>Skype
-                <a href="#nowhere">daria.voronina</a></p>
-            </li>
-            <li class="">
-              <p>E-mail
-                <a href="#nowhere">daria.voronina@gmail.</a></p>
-            </li>
-            <li class="">
-              <p>Phone
-                <a href="tel:+79166677112">+ 7 916 66 77 112</a></p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="container">
-      <ul class="footer-social">
-        <li>
+  <footer class="page-footer" id="block-4">
+    <div class="page-footer__wrapper">
+    <div class="page-footer__contacts contacts">
+      <h3>Свяжитесь со мной</h3>
+      <ul class="contact__list">
+        <li class="contact__item">
+          <p>Skype
+            <a href="#nowhere">daria.voronina</a></p>
+        </li>
+        <li class="contact__item">
+          <p>E-mail
+            <a href="#nowhere">daria.voronina@gmail.</a></p>
+        </li>
+        <li class="contact__item">
+          <p>Phone
+            <a href="tel:+79166677112">+ 7 916 66 77 112</a></p>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__social">
+      <ul class="social__list">
+        <li class="social__item">
           <a class="social-button" href="https://www.facebook.com">
             <span class="visually-hidden">Фейсбук</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -245,7 +144,7 @@
             </svg>
           </a>
         </li>
-        <li>
+        <li class="social__item">
           <a class="social-button" href="https://vk.com/feed">
             <span class="visually-hidden">Инстаграм</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;"
@@ -260,7 +159,7 @@
             </svg>
           </a>
         </li>
-        <li>
+        <li class="social__item">
           <a class="social-button" href="https://www.instagram.com">
             <span class="visually-hidden">Вконтакте</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -276,7 +175,7 @@
             </svg>
           </a>
         </li>
-        <li>
+        <li class="social__item">
           <a class="social-button" href="https://www.instagram.com">
             <span class="visually-hidden">Pinterest</span>
             <svg version="1.1" id="Capa_1" width="34" height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -294,8 +193,9 @@
         </li>
       </ul>
     </div>
+    </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+
 </body>
 
 </html>
