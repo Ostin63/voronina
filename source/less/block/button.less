@@ -1,0 +1,40 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: SansProBold, "Arial", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 3px;
+    color: #000;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 130px;
+    height: 3px;
+    color: #000;
+  }
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #444444;
+  }
+  &:focus {
+    outline: none;
+  }
+}
