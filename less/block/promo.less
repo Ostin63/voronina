@@ -1,3 +1,37 @@
 .promo {
-  
+  width: 320px;
+  padding-top: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  & h3 {
+    font-size: 18px;
+    .text-semibold();
+    margin-bottom: 45px;
+  }
+  & .promo__block {
+    width: 320px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    .promo__block--img-right {
+      margin-top: 35px;
+    }
+  }
+  & .promo__cite {
+    width: 270px;
+    text-align: center;
+    font-size: 14px;
+    .text-regular();
+    color: @black-text-color;
+  }
+  & .promo__cite--tel {
+    margin-bottom: 0;
+  }
+  & .promo-button {
+    margin-bottom: 30px;
+    ;
+  }
 }

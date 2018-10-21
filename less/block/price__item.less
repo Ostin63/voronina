@@ -1,0 +1,38 @@
+.price__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  .price__item--img {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .priae__item--time {
+    margin-left: 40px;
+    color: @green-text-color;
+    .text-bold();
+  }
+  .price__item--cash {
+    position: relative;
+    margin: 0;
+    margin-bottom: 15px;
+    margin-right: 40px;
+    margin-left: 140px;
+    color: @green-text-color;
+    .text-semibold();
+    &::before {
+      position: absolute;
+      content: "";
+      width: 9px;
+      height: 2px;
+      top: 7px;
+      left: -18px;
+      background: @green-text-color;
+    }
+  }
+  .price__item--cite {
+    margin: 0 auto;
+    padding: 0 15px;
+    .text-regular();
+  }
+}

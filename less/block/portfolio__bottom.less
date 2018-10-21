@@ -1,26 +1,27 @@
 .portfolio__bottom {
+  margin-top: 20px;
   margin-left: -15px;
   margin-right: -15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
   color: @white-text-color;
   background: url(../img/pdf-mobil.jpg) 50% 50% no-repeat;
   .portfolio__bottom--overlay {
     position: relative;
     width: 320px;
-    height: 298px;
     padding-right: 60px;
     padding-left: 40px;
     padding-top: 43px;
     padding-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     top: 0;
     left: 0;
     background: @background-overlay;
     box-sizing: border-box;
     & h3 {
-      margin-bottom: 25px;
+      margin-bottom: 12px;
     }
     & p {
       margin-bottom: 30px;
@@ -28,6 +29,7 @@
     .portfolio__bottom--toggle {
       border-bottom: 2px solid @line-button-white;
       color: @white-text-color;
+      z-index: 1;
       &::after {
         background: @white-text-color;
       }
@@ -47,20 +49,19 @@
       }
     }
     & .icon-pdf {
+      margin-top: 5px;
       width: 24px;
-      height: 28px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-top-right-radius: 3px;
-      border-top-left-radius: 3px;
-      border-bottom-right-radius: 3px;
-      border-bottom-left-radius: 3px;
-      font-size: 8px;
-      .text-button();
-      color: @white-text-color;
-      background: red;
+      height: 27px;
       box-sizing: border-box;
+    }
+    .frame {
+      position: absolute;
+      content: "";
+      width: 270px;
+      height: 370px;
+      top: -40px;
+      left: 20px;
+      border: 5px solid #8eb574;
     }
   }
 }
