@@ -1,40 +1,45 @@
 .button {
+  position: relative;
   display: block;
   box-sizing: border-box;
   border: none;
-  font-size: 28px;
+  border-bottom: 2px solid @black-text-color;
+  padding-right: 35px;
+  padding-left: 0;
+  font-size: 14px;
   line-height: 30px;
-  font-family: SansProBold, "Arial", sans-serif;
-  color: @white-text-color;
+  background: @background-button-color;
   text-decoration: none;
   text-transform: uppercase;
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    width: 28px;
-    height: 3px;
-    color: #000;
-  }
+  cursor: pointer;
+  transition: all 0.3s;
+  .text-button();
   &::after {
     position: absolute;
     content: "";
-    bottom: 0;
-    left: 0;
-    width: 130px;
-    height: 3px;
-    color: #000;
+    bottom: 14px;
+    right: 0;
+    width: 28px;
+    height: 2px;
+    background: @black-text-color;
   }
   &:hover {
-    color: #ffffff;
-    background-color: #444444;
-  }
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #444444;
+    color: @color-button-hover;
+    border-bottom: 2px solid @color-button-hover;
+    transition: all 0.3s;
+    &::after {
+      background: @color-button-hover;
+      transition: all 0.3s;
+    }
   }
   &:focus {
     outline: none;
+  }
+  &:active {
+    color: @color-button-active;
+    border-bottom: 2px solid @color-button-active;
+    &::after {
+      background: @color-button-active;
+    }
   }
 }

@@ -1,0 +1,73 @@
+.toggle-menu__list {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: @background-button-color;
+  outline: none;
+  span {
+    width: 0;
+    height: 0;
+  }
+  & input {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 3;
+  }
+  .toggle-menu__item {
+    position: relative;
+    width: 16px;
+    height: 3px;
+    margin-top: 5px;
+    margin-left: 14px;
+    background: #fff;
+    transition: all .5s;
+  }
+  .toggle-top {
+    width: 30px;
+    margin: 0;
+    transform-origin: 4px 0px;
+  }
+  .toggle-bottom {
+    transform-origin: bottom right;
+  }
+  & input:checked~.toggle-top {
+    top: -5px;
+    background: @black-text-color;
+    transform: rotate(45deg) translate(8px);
+    z-index: 2;
+    transition: all .5s;
+  }
+  & input:checked~.toggle-middle {
+    top: -3px;
+    left: -9px;
+    width: 30px;
+    background: @black-text-color;
+    transform: rotate(495deg) translate(4px);
+    z-index: 2;
+    transition: all .5s;
+  }
+  & input:checked~.toggle-bottom {
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+  & input:checked~.main-nav__list {
+    display: block;
+    z-index: 2;
+  }
+  & input:checked~.overlay {
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 480px;
+    top: -10px;
+    left: -275px;
+    background: @color-modal;
+    z-index: 1;
+    transition: all .5s;
+  }
+}

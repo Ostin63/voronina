@@ -1,0 +1,34 @@
+.top-site {
+  padding: 0 15px;
+  h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: @white-text-color;
+    .text-semibold();
+  }
+  P {
+    margin-bottom: 30px;
+    color: @white-text-color;
+  }
+  .top-site__button {
+    border-bottom: 2px solid @line-button-white;
+    color: @white-text-color;
+    &::after {
+      background: @white-text-color;
+    }
+    &:hover {
+      color: @color-button-hover;
+      border-bottom: 2px solid @color-button-hover;
+      &::after {
+        background: @color-button-hover;
+      }
+    }
+    &:active {
+      color: @color-button-active;
+      border-bottom: 2px solid @color-button-active;
+      &::after {
+        background: @color-button-active;
+      }
+    }
+  }
+}
