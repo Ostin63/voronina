@@ -1,16 +1,17 @@
 .top-site {
   padding: 0 15px;
-  h2 {
+  & h2 {
     margin-bottom: 15px;
     font-size: 30px;
     color: @white-text-color;
     .text-semibold();
   }
-  P {
+  & p {
     margin-bottom: 30px;
     color: @white-text-color;
   }
-  .top-site__button {
+  & .top-site__button {
+    margin-bottom: 215px;
     border-bottom: 2px solid @line-button-white;
     color: @white-text-color;
     &::after {
@@ -31,4 +32,43 @@
       }
     }
   }
+  & .top-site__social {
+    display: none;
+  }
+}
+
+@media @tablet-widths {
+  .top-site {
+    padding: 0;
+    & h2 {
+      margin-bottom: 35px;
+      font-size: 36px;
+      color: @black-text-color;
+    }
+    & p {
+      width: 270px;
+      margin-bottom: 30px;
+      font-size: 16px;
+      color: @black-text-color;
+    }
+    & .top-site__button {
+      border-bottom: 2px solid @black-text-color;
+      color: @black-text-color;
+      &::after {
+        background: @black-text-color;
+      }
+    }
+    & .top-site__social {
+      padding-bottom: 78px;
+      display: inline-block;
+      font-size: 12px;
+      .text-light();
+      color: @black-text-color;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media @desktop-widths {
+  transition: all .8s;
 }
