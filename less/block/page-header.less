@@ -1,9 +1,15 @@
 .page-header {
   padding-bottom: 133px;
   background: url(../img/daria-mobil.jpg) 50% 50% no-repeat;
-  &__container {
-    width: 320px;
-    margin: 0 auto;
-    background-color: @background-overlay;
+}
+
+.page-header__container {
+  .container();
+  background-color: @background-overlay;
+}
+
+@media @tablet-widths {
+  .page-header {
+    background: none;
   }
 }
