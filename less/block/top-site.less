@@ -6,12 +6,14 @@
     color: @white-text-color;
     .text-semibold();
   }
+  & picture {
+    display: none;
+  }
   & p {
     margin-bottom: 30px;
     color: @white-text-color;
   }
   & .top-site__button {
-    margin-bottom: 215px;
     border-bottom: 2px solid @line-button-white;
     color: @white-text-color;
     &::after {
@@ -45,6 +47,16 @@
       font-size: 36px;
       color: @black-text-color;
     }
+    & picture {
+      display: block;
+      position: absolute;
+      top: 175px;
+      left: 50%;
+      & img {
+        width: 327px;
+        height: 499px;
+      }
+    }
     & p {
       width: 270px;
       margin-bottom: 30px;
@@ -52,6 +64,7 @@
       color: @black-text-color;
     }
     & .top-site__button {
+      margin-bottom: 215px;
       border-bottom: 2px solid @black-text-color;
       color: @black-text-color;
       &::after {
@@ -70,5 +83,24 @@
 }
 
 @media @desktop-widths {
-  transition: all .8s;
+  .top-site {
+    margin-left: 155px;
+    & h2 {
+      font-size: 48px;
+    }
+    & picture {
+      top: 160px;
+      left: 48%;
+      & img {
+        width: 348px;
+        height: 533px;
+      }
+    }
+    & .top-site__button {
+      margin-bottom: 240px;
+    }
+    & .top-site__social {
+      padding-bottom: 34px;
+    }
+  }
 }

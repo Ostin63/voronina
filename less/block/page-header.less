@@ -4,15 +4,23 @@
     .container();
     padding-bottom: 133px;
     background: @background-overlay;
-    background-size: 320px 480px;
   }
 }
 
 @media @tablet-widths {
   .page-header {
-    background: none;
+    background: @background-dekstop ;
     &__container {
-      background-color: @background-dekstop;
+      background: url(../img/header-tablet.png) 100% 50% no-repeat;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .page-header {
+    &__container {
+      padding: 0;
+      background: url(../img/header-dekstop.png) 100% 0 no-repeat;
     }
   }
 }
