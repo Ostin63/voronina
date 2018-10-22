@@ -4,7 +4,7 @@
   margin-right: -15px;
   color: @white-text-color;
   background: url(../img/pdf-mobil.jpg) 50% 50% no-repeat;
-  .portfolio__bottom--overlay {
+  & .portfolio__bottom--overlay {
     position: relative;
     width: 320px;
     padding-right: 60px;
@@ -26,7 +26,7 @@
     & p {
       margin-bottom: 30px;
     }
-    .portfolio__bottom--toggle {
+    & .portfolio__bottom--toggle {
       border-bottom: 2px solid @line-button-white;
       color: @white-text-color;
       z-index: 1;
@@ -54,7 +54,7 @@
       height: 27px;
       box-sizing: border-box;
     }
-    .frame {
+    & .frame {
       position: absolute;
       content: "";
       width: 270px;
@@ -64,4 +64,66 @@
       border: 5px solid #8eb574;
     }
   }
+}
+
+@media @tablet-widths {
+  .portfolio__bottom {
+    position: relative;
+    width: 100%;
+    left: -60px;
+    background: url(../img/pdf-plan.jpg) 0 100% no-repeat;
+    & .portfolio__bottom--background {
+      position: absolute;
+      content: "";
+      width: 600px;
+      height: 300px;
+      top: -30px;
+      left: 0;
+      background: @background-dekstop;
+      z-index: -1;
+    }
+    & .portfolio__bottom--overlay {
+      width: 600px;
+      height: 300px;
+      padding-left: 275px;
+      color: @black-text-color;
+      background: none;
+      & h3 {
+        margin-top: 0;
+        font-size: 24px;
+      }
+      & p {
+        margin-bottom: 35px;
+        font-size: 16px;
+      }
+      & .portfolio__bottom--toggle {
+        border-bottom: 2px solid @black-text-color;
+        color: @black-text-color;
+        &::after {
+          background: @black-text-color;
+        }
+      }
+      & .icon-pdf {
+        margin-top: 5px;
+        width: 24px;
+        height: 27px;
+        box-sizing: border-box;
+      }
+      & .frame {
+        width: 570px;
+        height: 330px;
+        top: -10px;
+        left: 130px;
+        border: 5px solid #8eb574;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+  width: 1440px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  transition: all .8s;
 }
