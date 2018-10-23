@@ -811,8 +811,8 @@ template {
   width: 320px;
   padding-right: 60px;
   padding-left: 40px;
-  padding-top: 43px;
-  padding-bottom: 80px;
+  padding-top: 33px;
+  padding-bottom: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -836,6 +836,7 @@ template {
 }
 .portfolio__bottom .portfolio__bottom--overlay h3 {
   margin-bottom: 12px;
+  text-transform: initial;
 }
 .portfolio__bottom .portfolio__bottom--overlay p {
   margin-bottom: 30px;
@@ -877,9 +878,15 @@ template {
   top: -40px;
   left: 20px;
   border: 5px solid #8eb574;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 .promo {
   width: 320px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
   padding-top: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -897,12 +904,11 @@ template {
   margin: 0 auto;
 }
 .promo h3 {
+  margin-bottom: 45px;
   font-size: 18px;
   font-family: SansSemiBold, "Arial", serif;
-  margin-bottom: 45px;
 }
 .promo .promo__block {
-  width: 320px;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -912,7 +918,14 @@ template {
           justify-content: space-between;
 }
 .promo .promo__block .promo__block--img-right {
+  width: 145px;
+  height: 307px;
   margin-top: 35px;
+  margin-left: 10px;
+}
+.promo .promo__block .promo__block--img-left {
+  width: 165px;
+  height: 307px;
 }
 .promo .promo__cite {
   width: 270px;
@@ -921,10 +934,13 @@ template {
   font-family: SansProRegular, "Arial", serif;
   color: #212021;
 }
+.promo .promo__cite--phrase {
+  display: none;
+}
 .promo .promo__cite--tel {
   margin-bottom: 0;
 }
-.promo .promo-button {
+.promo .promo-phone {
   margin-bottom: 30px;
 }
 .price {
@@ -1304,6 +1320,7 @@ template {
     position: relative;
     width: 100%;
     left: -60px;
+    margin-bottom: 100px;
     background: url(../img/pdf-plan.jpg) 0 100% no-repeat;
   }
   .portfolio__bottom .portfolio__bottom--background {
@@ -1319,16 +1336,20 @@ template {
   .portfolio__bottom .portfolio__bottom--overlay {
     width: 600px;
     height: 300px;
+    padding-bottom: 90px;
     padding-left: 275px;
+    padding-right: 0;
     color: #212021;
     background: none;
   }
   .portfolio__bottom .portfolio__bottom--overlay h3 {
-    margin-top: 0;
+    margin-top: 30px;
     font-size: 24px;
   }
   .portfolio__bottom .portfolio__bottom--overlay p {
-    margin-bottom: 35px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    margin-right: 60px;
     font-size: 16px;
   }
   .portfolio__bottom .portfolio__bottom--overlay .portfolio__bottom--toggle {
@@ -1340,8 +1361,10 @@ template {
   }
   .portfolio__bottom .portfolio__bottom--overlay .icon-pdf {
     margin-top: 5px;
+    margin-right: 70px;
     width: 24px;
     height: 27px;
+    padding-right: 70px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -1351,7 +1374,75 @@ template {
     top: -10px;
     left: 130px;
     border: 5px solid #8eb574;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
     z-index: -1;
+  }
+  .promo {
+    width: 764px;
+    padding: 0 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  .promo {
+    position: relative;
+    padding-top: 176px;
+    padding-bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .promo h3 {
+    margin-bottom: 60px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    font-size: 24px;
+  }
+  .promo .promo__block {
+    margin-bottom: 30px;
+  }
+  .promo .promo__block .promo__block--img-right {
+    width: 306px;
+    height: 417px;
+    margin-top: 46px;
+    margin-left: 32px;
+  }
+  .promo .promo__block .promo__block--img-left {
+    width: 306px;
+    height: 417px;
+  }
+  .promo .promo__cite {
+    margin: 0;
+    font-size: 16px;
+  }
+  .promo .promo__cite--phrase-first {
+    margin-right: 70px;
+    margin-top: -40px;
+    text-align: left;
+  }
+  .promo .promo__cite--tel {
+    margin-top: -20px;
+    text-align: left;
+  }
+  .promo .promo-phone {
+    position: absolute;
+    bottom: 160px;
+    right: 138px;
+  }
+  .promo .promo__cite--button {
+    margin-top: 10px;
+    margin-left: 250px;
   }
 }
 @media (min-width: 1440px) {
@@ -1512,10 +1603,90 @@ template {
   .portfolio__container .portfolio .portfolio__list .portfolio__item a {
     font-size: 14px;
   }
-  width: 1440px;
-  padding: 0 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s
+  .portfolio__bottom {
+    left: -50px;
+    background: url(../img/pdf.jpg) 0 100% no-repeat;
+  }
+  .portfolio__bottom .portfolio__bottom--background {
+    width: 970px;
+    height: 375px;
+  }
+  .portfolio__bottom .portfolio__bottom--overlay {
+    width: 970px;
+    height: 375px;
+    padding-top: 0;
+    padding-left: 640px;
+  }
+  .portfolio__bottom .portfolio__bottom--overlay h3 {
+    margin-top: 50px;
+    font-size: 24px;
+  }
+  .portfolio__bottom .portfolio__bottom--overlay .frame {
+    width: 700px;
+    height: 455px;
+    top: -45px;
+    left: 430px;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  .promo {
+    width: 1440px;
+    padding: 0 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  .promo {
+    padding-bottom: 130px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .promo h3 {
+    width: 1440px;
+    text-align: center;
+    margin-bottom: 90px;
+    font-size: 36px;
+  }
+  .promo .promo__block .promo__block--img-right {
+    width: 316px;
+    height: 431px;
+    margin-top: 35px;
+  }
+  .promo .promo__block .promo__block--img-left {
+    width: 316px;
+    height: 431px;
+  }
+  .promo .promo__cite {
+    width: 320px;
+    margin: 0;
+  }
+  .promo .promo__cite--phrase-first {
+    position: relative;
+    margin-top: 135px;
+    margin-left: 54px;
+  }
+  .promo .promo__cite--phrase {
+    display: block;
+    position: absolute;
+    bottom: 320px;
+    right: 200px;
+    text-align: left;
+  }
+  .promo .promo__cite--tel {
+    position: absolute;
+    bottom: 260px;
+    right: 200px;
+  }
+  .promo .promo-phone {
+    bottom: 240px;
+    right: 285px;
+  }
+  .promo .promo__cite--button {
+    position: absolute;
+    margin: 0;
+    bottom: 160px;
+    right: 340px;
+  }
 }

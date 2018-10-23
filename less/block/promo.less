@@ -1,5 +1,5 @@
 .promo {
-  width: 320px;
+  .container();
   padding-top: 180px;
   display: flex;
   flex-direction: column;
@@ -7,17 +7,23 @@
   align-items: center;
   margin: 0 auto;
   & h3 {
+    margin-bottom: 45px;
     font-size: 18px;
     .text-semibold();
-    margin-bottom: 45px;
   }
   & .promo__block {
-    width: 320px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
-    .promo__block--img-right {
+    & .promo__block--img-right {
+      width: 145px;
+      height: 307px;
       margin-top: 35px;
+      margin-left: 10px;
+    }
+    & .promo__block--img-left {
+      width: 165px;
+      height: 307px;
     }
   }
   & .promo__cite {
@@ -27,11 +33,121 @@
     .text-regular();
     color: @black-text-color;
   }
+  & .promo__cite--phrase {
+    display: none;
+  }
   & .promo__cite--tel {
     margin-bottom: 0;
   }
-  & .promo-button {
+  & .promo-phone {
     margin-bottom: 30px;
     ;
+  }
+}
+
+@media @tablet-widths {
+  .promo {
+    position: relative;
+    padding-top: 176px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    & h3 {
+      margin-bottom: 60px;
+      align-self: center;
+      font-size: 24px;
+    }
+    & .promo__block {
+      margin-bottom: 30px;
+      & .promo__block--img-right {
+        width: 306px;
+        height: 417px;
+        margin-top: 46px;
+        margin-left: 32px;
+      }
+      & .promo__block--img-left {
+        width: 306px;
+        height: 417px;
+      }
+    }
+    & .promo__cite {
+      margin: 0;
+      font-size: 16px;
+    }
+    & .promo__cite--phrase-first {
+      margin-right: 70px;
+      margin-top: -40px;
+      text-align: left;
+    }
+    & .promo__cite--tel {
+      margin-top: -20px;
+      text-align: left;
+    }
+    & .promo-phone {
+      position: absolute;
+      bottom: 160px;
+      right: 138px;
+    }
+    & .promo__cite--button {
+      margin-top: 10px;
+      margin-left: 250px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .promo {
+    padding-bottom: 130px;
+    align-items: flex-start;
+    & h3 {
+      width: 1440px;
+      text-align: center;
+      margin-bottom: 90px;
+      font-size: 36px;
+    }
+    & .promo__block {
+      & .promo__block--img-right {
+        width: 316px;
+        height: 431px;
+        margin-top: 35px;
+      }
+      & .promo__block--img-left {
+        width: 316px;
+        height: 431px;
+      }
+    }
+    & .promo__cite {
+      width: 320px;
+      margin: 0;
+    }
+    & .promo__cite--phrase-first {
+      position: relative;
+      margin-top: 135px;
+      margin-left: 54px;
+    }
+    & .promo__cite--phrase {
+      display: block;
+      position: absolute;
+      bottom: 320px;
+      right: 200px;
+      text-align: left;
+    }
+    & .promo__cite--tel {
+      position: absolute;
+      bottom: 260px;
+      right: 200px;
+    }
+    & .promo-phone {
+      bottom: 240px;
+      right: 285px;
+    }
+    & .promo__cite--button {
+      position: absolute;
+      margin: 0;
+      bottom: 160px;
+      right: 340px;
+    }
   }
 }
