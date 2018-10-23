@@ -1,12 +1,26 @@
 .page-footer {
-  width: 320px;
+  .container();
   padding-top: 130px;
   padding-bottom: 85px;
   margin: 0 auto;
-  .page-footer__contacts{
+  & .page-footer__contacts {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media @tablet-widths {
+  .page-footer {
+    padding-top: 115px;
+    padding-bottom: 70px;
+  }
+}
+
+@media @desktop-widths {
+  .page-footer {
+    padding-top: 125px;
+    padding-bottom: 194px;
   }
 }

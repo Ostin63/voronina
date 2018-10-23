@@ -4,7 +4,7 @@
     .text-semibold();
   }
   & .contact__list {
-    width: 320px;
+    .container();
     padding-left: 0;
     .contact__item {
       list-style: none;
@@ -33,6 +33,32 @@
           color: @black-text-color;
         }
       }
+    }
+  }
+}
+
+@media @tablet-widths {
+  .contacts {
+    margin-top: 56px;
+    & h3 {
+      font-size: 24px;
+    }
+    & .contact__list {
+      margin-bottom: 41px;
+      & p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+  .contacts {
+    & .contact__list {
+      width: 1000px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     }
   }
 }
