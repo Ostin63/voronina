@@ -744,10 +744,20 @@ template {
           flex-direction: column;
 }
 .portfolio__container .portfolio h3 {
+  position: relative;
   font-size: 18px;
   font-family: SansSemiBold, "Arial", serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+.portfolio__container .portfolio h3::before {
+  position: absolute;
+  content: "";
+  top: -50px;
+  left: 58px;
+  width: 2px;
+  height: 27px;
+  background: #cb98a8;
 }
 .portfolio__container .portfolio .portfolio__list {
   padding-left: 0;
@@ -890,9 +900,19 @@ template {
   margin: 0 auto;
 }
 .promo h3 {
+  position: relative;
   margin-bottom: 45px;
   font-size: 18px;
   font-family: SansSemiBold, "Arial", serif;
+}
+.promo h3::before {
+  position: absolute;
+  content: "";
+  top: -70px;
+  left: 35px;
+  width: 2px;
+  height: 27px;
+  background: #cb98a8;
 }
 .promo .promo__block {
   margin-bottom: 30px;
@@ -950,8 +970,18 @@ template {
           box-sizing: border-box;
 }
 .price h3 {
+  position: relative;
   font-size: 18px;
   font-family: SansSemiBold, "Arial", serif;
+}
+.price h3::before {
+  position: absolute;
+  content: "";
+  top: -70px;
+  left: 47px;
+  width: 2px;
+  height: 27px;
+  background: #cb98a8;
 }
 .price .price__list {
   list-style: none;

@@ -8,8 +8,18 @@
   align-items: center;
   box-sizing: border-box;
   & h3 {
+    position: relative;
     font-size: 18px;
     .text-semibold();
+    &::before {
+      position: absolute;
+      content: "";
+      top: -70px;
+      left: 47px;
+      width: 2px;
+      height: 27px;
+      background: @color-line;
+    }
   }
   & .price__list {
     list-style: none;

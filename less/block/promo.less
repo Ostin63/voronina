@@ -7,9 +7,19 @@
   align-items: center;
   margin: 0 auto;
   & h3 {
+    position: relative;
     margin-bottom: 45px;
     font-size: 18px;
     .text-semibold();
+    &::before {
+      position: absolute;
+      content: "";
+      top: -70px;
+      left: 35px;
+      width: 2px;
+      height: 27px;
+      background: @color-line;
+    }
   }
   & .promo__block {
     margin-bottom: 30px;
