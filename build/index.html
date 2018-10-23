@@ -107,14 +107,18 @@
 
     <section class="promo" id="block-2">
       <h3>Обо мне</h3>
-      <picture class="promo__block">
+      <div class="promo__block">
+      <picture>
         <source media="(min-width: 1440px)" srcset="img/foto-left.jpg">
-        <source media="(min-width: 1440px)" srcset="img/foto-right.jpg">
         <source media="(min-width: 764px)" srcset="img/foto-left-plan.jpg">
-        <source media="(min-width: 764px)" srcset="img/foto-right-plan.jpg">
         <img class="promo__block--img-left" src="img/foto-left-mobil.jpg" width="165" height="307" alt="Фото блюда">
+      </picture>
+      <picture class="">
+        <source media="(min-width: 1440px)" srcset="img/foto-right.jpg">
+        <source media="(min-width: 764px)" srcset="img/foto-right-plan.jpg">
         <img class="promo__block--img-right" src="img/foto-right-mobil.jpg" width="145" height="307" alt="Фото блюда">
       </picture>
+      </div>
       <p class="promo__cite promo__cite--phrase-first">Во всех фотосъемках еды, я работаю как фуд-фотограф и фуд-стилист. Создаю креативные
         концепции, реализую
         ваши идеи. Разрабатываю рецепты, вкусно снимаю. Провожу обучение</p>
