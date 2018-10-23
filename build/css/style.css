@@ -1437,6 +1437,9 @@ template {
     padding-top: 239px;
     padding-bottom: 200px;
   }
+  .price h3 {
+    font-size: 24px;
+  }
   .price .price__list {
     margin-top: 96px;
     display: -webkit-box;
@@ -1761,6 +1764,9 @@ template {
     -webkit-transition: all 0.8s;
     transition: all 0.8s;
   }
+  .price h3 {
+    font-size: 36px;
+  }
   .price .price__list {
     margin-bottom: 100px;
   }
@@ -1828,6 +1834,9 @@ template {
   .page-footer {
     padding-top: 125px;
     padding-bottom: 194px;
+  }
+  .contacts h3 {
+    font-size: 36px;
   }
   .contacts .contact__list {
     width: 1000px;
