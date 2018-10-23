@@ -475,8 +475,6 @@ template {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-family: RalewayBold, PT Sans, sans-serif;
 }
 .button::after {
@@ -491,13 +489,9 @@ template {
 .button:hover {
   color: #d8bdbf;
   border-bottom: 2px solid #d8bdbf;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 .button:hover::after {
   background: #d8bdbf;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 .button:focus {
   outline: none;
@@ -553,8 +547,6 @@ template {
   border-right: 6px solid #8eb574;
   border-top: 6px solid #8eb574;
   border-bottom: 6px solid #8eb574;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 .main-nav .page-header__logo {
   margin-top: 0px;
@@ -759,8 +751,6 @@ template {
 }
 .portfolio__container .portfolio .portfolio__list {
   padding-left: 0;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
 }
 .portfolio__container .portfolio .portfolio__list .portfolio__item {
   display: -webkit-box;
@@ -771,8 +761,6 @@ template {
       -ms-flex-direction: column;
           flex-direction: column;
   list-style: none;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
 }
 .portfolio__container .portfolio .portfolio__list .portfolio__item .portfolio__item--img {
   width: 290px;
@@ -878,8 +866,6 @@ template {
   top: -40px;
   left: 20px;
   border: 5px solid #8eb574;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
 }
 .promo {
   width: 320px;
@@ -1050,12 +1036,6 @@ template {
   font-family: SansSemiBold, "Arial", serif;
 }
 .contacts .contact__list {
-  width: 320px;
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
   padding-left: 0;
 }
 .contacts .contact__list .contact__item {
@@ -1121,7 +1101,7 @@ template {
 .social__item .social-button:active path {
   fill: #640814;
 }
-@media (min-width: 910px) {
+@media (min-width: 902px) {
   .page-header__container {
     width: 764px;
     padding: 0 60px;
@@ -1148,8 +1128,6 @@ template {
     border-left: 10px solid #8eb574;
     border-top: 10px solid #8eb574;
     border-bottom: 10px solid #8eb574;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
   }
   .main-nav .page-header__logo {
     margin-top: 0px;
@@ -1273,14 +1251,10 @@ template {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
   }
   .portfolio__container .portfolio .portfolio__list .portfolio__item:nth-child(1) {
     width: 240px;
     margin-top: 100px;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
   }
   .portfolio__container .portfolio .portfolio__list .portfolio__item:nth-child(1) img {
     width: 240px;
@@ -1289,8 +1263,6 @@ template {
   .portfolio__container .portfolio .portfolio__list .portfolio__item:nth-child(2) {
     width: 184px;
     margin: 0 19px;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
   }
   .portfolio__container .portfolio .portfolio__list .portfolio__item:nth-child(2) img {
     width: 184px;
@@ -1304,8 +1276,6 @@ template {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
   }
   .portfolio__container .portfolio .portfolio__list .portfolio__item:nth-child(3) img {
     width: 184px;
@@ -1314,8 +1284,6 @@ template {
   .portfolio__container .portfolio .portfolio__list .portfolio__item:nth-child(4) {
     width: 181px;
     margin-top: 115px;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -1389,8 +1357,6 @@ template {
     top: -10px;
     left: 130px;
     border: 5px solid #8eb574;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
     z-index: -1;
   }
   .promo {
@@ -1534,14 +1500,6 @@ template {
     padding-top: 115px;
     padding-bottom: 70px;
   }
-  .contacts .contact__list {
-    width: 764px;
-    padding: 0 60px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
-  }
   .contacts {
     margin-top: 56px;
   }
@@ -1580,8 +1538,6 @@ template {
     border-left: 10px solid #8eb574;
     border-top: 10px solid #8eb574;
     border-bottom: 10px solid #8eb574;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
   }
   .main-nav .main-nav__list {
     width: 430px;
@@ -1736,8 +1692,6 @@ template {
     height: 455px;
     top: -45px;
     left: 430px;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
   }
   .promo {
     width: 1440px;
@@ -1874,14 +1828,6 @@ template {
   .page-footer {
     padding-top: 125px;
     padding-bottom: 194px;
-  }
-  .contacts .contact__list {
-    width: 1440px;
-    padding: 0 50px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
   }
   .contacts .contact__list {
     width: 1000px;

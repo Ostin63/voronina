@@ -12,7 +12,6 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s;
   .text-button();
   &::after {
     position: absolute;
@@ -26,10 +25,8 @@
   &:hover {
     color: @color-button-hover;
     border-bottom: 2px solid @color-button-hover;
-    transition: all 0.3s;
     &::after {
       background: @color-button-hover;
-      transition: all 0.3s;
     }
   }
   &:focus {
