@@ -1,5 +1,5 @@
 .price {
-  width: 320px;
+  .container();
   padding: 0 15px;
   padding-top: 140px;
   margin: 0 auto;
@@ -11,8 +11,30 @@
     font-size: 18px;
     .text-semibold();
   }
-  .price__list {
+  & .price__list {
     list-style: none;
     padding-left: 0;
+  }
+}
+
+@media @tablet-widths {
+  .price {
+    padding-top: 239px;
+    padding-bottom: 200px;
+    & .price__list {
+      margin-top: 96px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .price {
+    & .price__list {
+      margin-bottom: 100px;
+    }
   }
 }

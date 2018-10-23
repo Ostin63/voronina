@@ -3,16 +3,20 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  .price__item--img {
+  & .price__item--block {
     margin-top: 50px;
     margin-bottom: 20px;
+    & img {
+      width: 290px;
+      height: 381px;
+    }
   }
-  .priae__item--time {
+  & .priae__item--time {
     margin-left: 40px;
     color: @green-text-color;
     .text-bold();
   }
-  .price__item--cash {
+  & .price__item--cash {
     position: relative;
     margin: 0;
     margin-bottom: 15px;
@@ -30,9 +34,108 @@
       background: @green-text-color;
     }
   }
-  .price__item--cite {
+  & .price__item--cite {
     margin: 0 auto;
     padding: 0 15px;
     .text-regular();
+  }
+}
+
+@media @tablet-widths {
+  .price__item--left {
+    width: 239px;
+    margin-top: 50px;
+    & .price__item--block {
+      & img {
+        width: 239px;
+        height: 381px;
+      }
+    }
+  }
+  .price__item--middle {
+    margin-left: 19px;
+    margin-right: 19px;
+    width: 186px;
+    & .price__item--block {
+      margin-top: 0;
+      & img {
+        width: 186px;
+        height: 234px;
+      }
+    }
+  }
+  .price__item--right {
+    width: 181px;
+    margin-top: 70px;
+    & .price__item--block {
+      & img {
+        width: 181px;
+        height: 291px;
+      }
+    }
+  }
+  .price__item {
+    & .priae__item--time {
+      margin-left: 25px;
+    }
+    & .price__item--cash {
+      margin-left: 90px;
+      margin-right: 0;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .price__item--left {
+    width: 414px;
+    margin-top: 50px;
+    & .price__item--block {
+      & img {
+        width: 414px;
+        height: 649px;
+      }
+    }
+  }
+  .price__item--middle {
+    margin-left: 32px;
+    margin-right: 32px;
+    width: 317px;
+    & .price__item--block {
+      margin-top: 0;
+      & img {
+        width: 317px;
+        height: 397px;
+      }
+    }
+  }
+  .price__item--right {
+    width: 315px;
+    margin-top: 70px;
+    & .price__item--block {
+      & img {
+        width: 315px;
+        height: 496px;
+      }
+    }
+  }
+  .price__item {
+    display: flex;
+    flex-direction: column;
+    & .priae__item--time {
+      margin-left: -60px;
+      font-size: 24px;
+    }
+    & .price__item--cash {
+      margin-left: 180px;
+      font-size: 18px;
+      &::before {
+        width: 20px;
+        top: 9px;
+        left: -25px;
+      }
+    }
+    & .price__item--cite {
+      text-align: center;
+    }
   }
 }

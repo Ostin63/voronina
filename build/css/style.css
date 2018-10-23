@@ -945,6 +945,8 @@ template {
 }
 .price {
   width: 320px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
   padding: 0 15px;
   padding-top: 140px;
   margin: 0 auto;
@@ -982,9 +984,13 @@ template {
       -ms-flex-align: center;
           align-items: center;
 }
-.price__item .price__item--img {
+.price__item .price__item--block {
   margin-top: 50px;
   margin-bottom: 20px;
+}
+.price__item .price__item--block img {
+  width: 290px;
+  height: 381px;
 }
 .price__item .priae__item--time {
   margin-left: 40px;
@@ -1444,6 +1450,69 @@ template {
     margin-top: 10px;
     margin-left: 250px;
   }
+  .price {
+    width: 764px;
+    padding: 0 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  .price {
+    padding-top: 239px;
+    padding-bottom: 200px;
+  }
+  .price .price__list {
+    margin-top: 96px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .price__item--left {
+    width: 239px;
+    margin-top: 50px;
+  }
+  .price__item--left .price__item--block img {
+    width: 239px;
+    height: 381px;
+  }
+  .price__item--middle {
+    margin-left: 19px;
+    margin-right: 19px;
+    width: 186px;
+  }
+  .price__item--middle .price__item--block {
+    margin-top: 0;
+  }
+  .price__item--middle .price__item--block img {
+    width: 186px;
+    height: 234px;
+  }
+  .price__item--right {
+    width: 181px;
+    margin-top: 70px;
+  }
+  .price__item--right .price__item--block img {
+    width: 181px;
+    height: 291px;
+  }
+  .price__item .priae__item--time {
+    margin-left: 25px;
+  }
+  .price__item .price__item--cash {
+    margin-left: 90px;
+    margin-right: 0;
+  }
 }
 @media (min-width: 1440px) {
   .page-header__container {
@@ -1638,7 +1707,7 @@ template {
     transition: all 0.8s;
   }
   .promo {
-    padding-bottom: 130px;
+    padding-bottom: 80px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1664,7 +1733,7 @@ template {
   }
   .promo .promo__cite--phrase-first {
     position: relative;
-    margin-top: 135px;
+    margin-top: 85px;
     margin-left: 54px;
   }
   .promo .promo__cite--phrase {
@@ -1688,5 +1757,69 @@ template {
     margin: 0;
     bottom: 160px;
     right: 340px;
+  }
+  .price {
+    width: 1440px;
+    padding: 0 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  .price .price__list {
+    margin-bottom: 100px;
+  }
+  .price__item--left {
+    width: 414px;
+    margin-top: 50px;
+  }
+  .price__item--left .price__item--block img {
+    width: 414px;
+    height: 649px;
+  }
+  .price__item--middle {
+    margin-left: 32px;
+    margin-right: 32px;
+    width: 317px;
+  }
+  .price__item--middle .price__item--block {
+    margin-top: 0;
+  }
+  .price__item--middle .price__item--block img {
+    width: 317px;
+    height: 397px;
+  }
+  .price__item--right {
+    width: 315px;
+    margin-top: 70px;
+  }
+  .price__item--right .price__item--block img {
+    width: 315px;
+    height: 496px;
+  }
+  .price__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .price__item .priae__item--time {
+    margin-left: -60px;
+    font-size: 24px;
+  }
+  .price__item .price__item--cash {
+    margin-left: 180px;
+    font-size: 18px;
+  }
+  .price__item .price__item--cash::before {
+    width: 20px;
+    top: 9px;
+    left: -25px;
+  }
+  .price__item .price__item--cite {
+    text-align: center;
   }
 }
