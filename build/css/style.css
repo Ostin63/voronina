@@ -1121,7 +1121,7 @@ template {
 .social__item .social-button:active path {
   fill: #640814;
 }
-@media (min-width: 764px) {
+@media (min-width: 910px) {
   .page-header__container {
     width: 764px;
     padding: 0 60px;
@@ -1555,7 +1555,7 @@ template {
     font-size: 16px;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1458px) {
   .page-header__container {
     width: 1440px;
     padding: 0 50px;
