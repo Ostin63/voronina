@@ -1124,39 +1124,13 @@ template {
 .social__item .social-button:active path {
   fill: #640814;
 }
-@media all and (min-width: 902px) {
+@media (min-width: 902px) {
   .page-header__container {
     width: 764px;
     padding: 0 60px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .portfolio__container {
-    width: 764px;
-    padding: 0 60px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .promo {
-    width: 764px;
-    padding: 0 60px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .price {
-    width: 764px;
-    padding: 0 60px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .page-footer {
-    width: 764px;
-    padding: 0 60px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-}
-@media (min-width: 902px) {
   .page-header {
     background: #f8f8f8;
   }
@@ -1269,6 +1243,12 @@ template {
     font-family: SansProLight, "Arial", serif;
     color: #212021;
     text-transform: uppercase;
+  }
+  .portfolio__container {
+    width: 764px;
+    padding: 0 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .portfolio__container .portfolio h3 {
     font-size: 24px;
@@ -1412,6 +1392,12 @@ template {
     z-index: -1;
   }
   .promo {
+    width: 764px;
+    padding: 0 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .promo {
     position: relative;
     padding-top: 176px;
     padding-bottom: 100px;
@@ -1468,6 +1454,12 @@ template {
   .promo .promo__cite--button {
     margin-top: 10px;
     margin-left: 250px;
+  }
+  .price {
+    width: 764px;
+    padding: 0 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .price {
     padding-top: 239px;
@@ -1529,6 +1521,12 @@ template {
     margin-right: 0;
   }
   .page-footer {
+    width: 764px;
+    padding: 0 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .page-footer {
     padding-top: 115px;
     padding-bottom: 70px;
   }
@@ -1545,39 +1543,13 @@ template {
     font-size: 16px;
   }
 }
-@media all and (min-width: 1458px) {
+@media (min-width: 1458px) {
   .page-header__container {
     width: 1440px;
     padding: 0 50px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .portfolio__container {
-    width: 1440px;
-    padding: 0 50px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .promo {
-    width: 1440px;
-    padding: 0 50px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .price {
-    width: 1440px;
-    padding: 0 50px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .page-footer {
-    width: 1440px;
-    padding: 0 50px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-}
-@media (min-width: 1458px) {
   .page-header__container {
     padding: 0;
     background: url(../img/header-dekstop.png) 100% 0 no-repeat;
@@ -1669,6 +1641,12 @@ template {
   .top-site .top-site__social {
     padding-bottom: 34px;
   }
+  .portfolio__container {
+    width: 1440px;
+    padding: 0 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
   .portfolio__container .portfolio h3 {
     font-size: 36px;
   }
@@ -1755,6 +1733,12 @@ template {
     left: 430px;
   }
   .promo {
+    width: 1440px;
+    padding: 0 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .promo {
     padding-bottom: 80px;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -1807,6 +1791,12 @@ template {
     margin: 0;
     bottom: 160px;
     right: 340px;
+  }
+  .price {
+    width: 1440px;
+    padding: 0 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .price h3 {
     font-size: 36px;
@@ -1867,6 +1857,12 @@ template {
   }
   .price__item .price__item--cite {
     text-align: center;
+  }
+  .page-footer {
+    width: 1440px;
+    padding: 0 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .page-footer {
     padding-top: 125px;
