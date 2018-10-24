@@ -683,6 +683,7 @@ template {
   padding: 0 15px;
 }
 .top-site h2 {
+  position: relative;
   margin-bottom: 15px;
   font-size: 30px;
   color: #ffffff;
@@ -739,12 +740,21 @@ template {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.portfolio__container .portfolio h3 {
+.portfolio__container .portfolio h2 {
   position: relative;
   font-size: 18px;
   font-family: SansSemiBold, "Arial", serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+.portfolio__container .portfolio h2::before {
+  position: absolute;
+  content: "";
+  top: -70px;
+  left: 50%;
+  width: 2px;
+  height: 27px;
+  background: #cb98a8;
 }
 .portfolio__container .portfolio .portfolio__list {
   padding-left: 0;
@@ -822,6 +832,8 @@ template {
 }
 .portfolio__bottom .portfolio__bottom--overlay h3 {
   margin-bottom: 12px;
+  font-size: 18px;
+  font-family: SansSemiBold, "Arial", serif;
   text-transform: initial;
 }
 .portfolio__bottom .portfolio__bottom--overlay p {
@@ -895,7 +907,7 @@ template {
   position: absolute;
   content: "";
   top: -70px;
-  left: 35px;
+  left: 50%;
   width: 2px;
   height: 27px;
   background: #cb98a8;
@@ -1052,8 +1064,8 @@ template {
 .contacts h3::before {
   position: absolute;
   content: "";
-  top: -60px;
-  left: 49%;
+  top: -70px;
+  left: 50%;
   width: 2px;
   height: 27px;
   background: #cb98a8;
@@ -1250,7 +1262,7 @@ template {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .portfolio__container .portfolio h3 {
+  .portfolio__container .portfolio h2 {
     font-size: 24px;
   }
   .portfolio__container .portfolio .portfolio__list {
@@ -1527,7 +1539,7 @@ template {
             box-sizing: border-box;
   }
   .page-footer {
-    padding-top: 115px;
+    padding-top: 0;
     padding-bottom: 70px;
   }
   .contacts {
@@ -1647,7 +1659,7 @@ template {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .portfolio__container .portfolio h3 {
+  .portfolio__container .portfolio h2 {
     font-size: 36px;
   }
   .portfolio__container .portfolio .portfolio__list {
@@ -1739,6 +1751,7 @@ template {
             box-sizing: border-box;
   }
   .promo {
+    padding-top: 170px;
     padding-bottom: 80px;
     -webkit-box-align: start;
         -ms-flex-align: start;
