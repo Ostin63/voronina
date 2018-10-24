@@ -754,7 +754,7 @@ template {
   position: absolute;
   content: "";
   top: -50px;
-  left: 58px;
+  left: 50%;
   width: 2px;
   height: 27px;
   background: #cb98a8;
@@ -915,6 +915,7 @@ template {
   background: #cb98a8;
 }
 .promo .promo__block {
+  width: 320px;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -927,7 +928,6 @@ template {
   width: 145px;
   height: 307px;
   margin-top: 35px;
-  margin-left: 10px;
 }
 .promo .promo__block .promo__block--img-left {
   width: 165px;
@@ -978,7 +978,7 @@ template {
   position: absolute;
   content: "";
   top: -70px;
-  left: 47px;
+  left: 50%;
   width: 2px;
   height: 27px;
   background: #cb98a8;
@@ -1062,8 +1062,18 @@ template {
           align-items: center;
 }
 .contacts h3 {
+  position: relative;
   font-size: 18px;
   font-family: SansSemiBold, "Arial", serif;
+}
+.contacts h3::before {
+  position: absolute;
+  content: "";
+  top: -60px;
+  left: 49%;
+  width: 2px;
+  height: 27px;
+  background: #cb98a8;
 }
 .contacts .contact__list {
   padding-left: 0;
@@ -1421,13 +1431,13 @@ template {
     font-size: 24px;
   }
   .promo .promo__block {
+    width: 640px;
     margin-bottom: 30px;
   }
   .promo .promo__block .promo__block--img-right {
     width: 306px;
     height: 417px;
     margin-top: 46px;
-    margin-left: 32px;
   }
   .promo .promo__block .promo__block--img-left {
     width: 306px;
@@ -1746,10 +1756,12 @@ template {
     margin-bottom: 90px;
     font-size: 36px;
   }
+  .promo .promo__block {
+    width: 660px;
+  }
   .promo .promo__block .promo__block--img-right {
     width: 316px;
     height: 431px;
-    margin-top: 35px;
   }
   .promo .promo__block .promo__block--img-left {
     width: 316px;

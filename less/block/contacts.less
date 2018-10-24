@@ -1,7 +1,17 @@
 .contacts {
   & h3 {
+    position: relative;
     font-size: 18px;
     .text-semibold();
+    &::before {
+      position: absolute;
+      content: "";
+      top: -60px;
+      left: 49%;
+      width: 2px;
+      height: 27px;
+      background: @color-line;
+    }
   }
   & .contact__list {
     padding-left: 0;
