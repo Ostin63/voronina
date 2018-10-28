@@ -447,16 +447,18 @@ template {
 [hidden] {
   display: none;
 }
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-  width: 0;
-  height: 0;
+  width: 1px;
+  height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -548,6 +550,7 @@ template {
 }
 .main-nav .page-header__logo {
   margin-top: 0px;
+  margin-right: 160px;
   z-index: 3;
 }
 .main-nav .page-header__logo img {
@@ -1171,9 +1174,11 @@ template {
     width: 201px;
     height: 60px;
   }
+  .main-nav .main-nav__toggle {
+    margin-right: 130px;
+  }
   .main-nav .main-nav__phone {
     display: inline-block;
-    margin-right: 50px;
     color: #3b3b3b;
   }
   .toggle-menu__list .toggle-menu__item {
@@ -1198,7 +1203,7 @@ template {
     width: 764px;
     min-height: 825px;
     top: -20px;
-    left: -338px;
+    left: -339px;
   }
   .site-list {
     top: -20px;
@@ -1228,7 +1233,7 @@ template {
     display: block;
     position: absolute;
     top: 175px;
-    left: 50%;
+    left: 49.5%;
   }
   .top-site picture img {
     width: 327px;
@@ -1567,13 +1572,14 @@ template {
     background: url(../img/header-dekstop.png) 100% 0 no-repeat;
   }
   .main-nav {
+    width: 1050px;
     margin-bottom: 230px;
   }
   .main-nav .main-nav--border {
     width: 605px;
     height: 632px;
     top: 100px;
-    left: 52%;
+    left: 72%;
     border-right: 10px solid #8eb574;
     border-left: 10px solid #8eb574;
     border-top: 10px solid #8eb574;
@@ -1581,6 +1587,7 @@ template {
   }
   .main-nav .main-nav__list {
     width: 430px;
+    margin-left: -200px;
     padding: 0;
     padding-top: 10px;
     display: -webkit-box;
@@ -1600,6 +1607,7 @@ template {
   }
   .main-nav .page-header__logo {
     margin-left: 0;
+    margin-right: 400px;
   }
   .main-nav .page-header__logo img {
     width: 254px;
@@ -1607,7 +1615,6 @@ template {
   }
   .main-nav .main-nav__phone {
     display: inline-block;
-    margin-right: 395px;
     color: #878787;
   }
   .toggle-menu__list {
@@ -1616,8 +1623,23 @@ template {
   .toggle-menu__list .toggle-menu__item {
     display: none;
   }
+  .toggle-menu__list input {
+    display: none;
+  }
   .site-list {
+    position: relative;
     top: -15px;
+    right: 50px;
+    z-index: 5;
+  }
+  .site-list::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    color: red;
   }
   .site-list .site-list__item {
     margin-bottom: 0;
@@ -1633,11 +1655,36 @@ template {
   .site-list .site-list__item:nth-child(1) {
     display: none;
   }
+  .site-list .site-list__item:nth-child(2) {
+    padding-left: 20px;
+  }
   .top-site {
     margin-left: 155px;
   }
   .top-site h2 {
+    position: relative;
     font-size: 48px;
+    z-index: 1;
+  }
+  .top-site h2::before {
+    content: "Food";
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    font-size: 84px;
+    font-family: SansSemiBold, "Arial", serif;
+    color: #ffffff;
+    z-index: -1;
+  }
+  .top-site h2::after {
+    content: "Photogrphy";
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    font-size: 52px;
+    font-family: SansSemiBold, "Arial", serif;
+    color: #ffffff;
+    z-index: -1;
   }
   .top-site picture {
     top: 160px;

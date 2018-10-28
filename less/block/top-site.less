@@ -52,7 +52,7 @@
       display: block;
       position: absolute;
       top: 175px;
-      left: 50%;
+      left: 49.5%;
       & img {
         width: 327px;
         height: 499px;
@@ -87,7 +87,29 @@
   .top-site {
     margin-left: 155px;
     & h2 {
+      position: relative;
       font-size: 48px;
+      z-index: 1;
+      &::before {
+        content: "Food";
+        position: absolute;
+        top: -35px;
+        left: -35px;
+        font-size: 84px;
+        .text-semibold();
+        color: @white-text-color;
+        z-index: -1;
+      }
+      &::after {
+        content: "Photogrphy";
+        position: absolute;
+        top: 40px;
+        left: 185px;
+        font-size: 52px;
+        .text-semibold();
+        color: @white-text-color;
+        z-index: -1;
+      }
     }
     & picture {
       top: 160px;
