@@ -5,12 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Фотограф и стилист Дарья Воронина"</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-wrapper">
-
-  <header class="page-header">
+  <div class="page-menu__wrapper">
+      <div class="page-menu__wrapper--block">
+        <span class="block block-1">01</span>
+      </div>
+      <div class="page-menu__wrapper--block">
+         <span class="block block-2">02</span>
+      </div>
+      <div class="page-menu__wrapper--block">
+        <span class="block block-3">03</span>
+      </div>
+      <div class="page-menu__wrapper--block">
+        <span class="block block-4">04</span>
+      </div>
+      <div class="page-menu__wrapper--block">
+        <span class="block block-5">05</span>
+      </div>
+      <div class="page-menu__wrapper--block">
+        <span class="block block-6">06</span>
+      </div>
+    </div>
+  </div>
+  
+  <header class="page-header" id="block-0">
     <div class="page-header__container">
       <nav class="main-nav">
         <div class="main-nav--border"></div>
@@ -253,6 +275,91 @@
       </ul>
     </div>
   </footer>
+  <script src="js/jQuery.min.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script>
+    $('.block-1')
+        .waypoint(function (dir) {
+          if (dir === 'down')
+            $(this)
+              .removeClass('show');
+          else
+            $(this)
+              .addClass('show');
+        }, {
+            offset: -300
+          })
+      $('.block-2')
+      .waypoint(function (dir) {
+          if (dir === 'down')
+            $(this)
+              .addClass('show');
+          else
+            $(this)
+              .removeClass('show');
+        }, {
+            offset: -270
+          })
+        .waypoint(function (dir) {
+          if (dir === 'down')
+            $(this)
+              .removeClass('show');
+          else
+            $(this)
+              .addClass('show');
+        }, {
+            offset: -2300
+          })
+          
+      $('.block-3')
+      .waypoint(function (dir) {
+          if (dir === 'down')
+            $(this)
+
+              .addClass('show');
+          else
+            $(this)
+              .removeClass('show');
+        }, {
+            offset: -2300
+          })
+        .waypoint(function (dir) {
+          if (dir === 'down')
+            $(this)
+              .removeClass('show');
+          else
+            $(this)
+              .addClass('show');
+        }, {
+            offset: -3200
+          })
+
+          $('.block-4')
+              .waypoint(function (dir) {
+                if (dir === 'down')
+                  $(this)
+
+                    .addClass('show');
+                else
+                  $(this)
+                    .removeClass('show');
+              }, {
+                  offset: -3200
+                })
+              .waypoint(function (dir) {
+                if (dir === 'down')
+                  $(this)
+                    .removeClass('show');
+                else
+                  $(this)
+                    .addClass('show');
+              }, {
+                  offset: -3900
+                })
+
+          
+  </script>
 
 </body>
 
