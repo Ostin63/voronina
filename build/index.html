@@ -10,29 +10,16 @@
 </head>
 
 <body class="page-wrapper">
-  <div class="page-menu__wrapper">
-      <div class="page-menu__wrapper--block">
-        <span class="block block-1">01</span>
-      </div>
-      <div class="page-menu__wrapper--block">
-         <span class="block block-2">02</span>
-      </div>
-      <div class="page-menu__wrapper--block">
-        <span class="block block-3">03</span>
-      </div>
-      <div class="page-menu__wrapper--block">
-        <span class="block block-4">04</span>
-      </div>
-      <div class="page-menu__wrapper--block">
-        <span class="block block-5">05</span>
-      </div>
-      <div class="page-menu__wrapper--block">
-        <span class="block block-6">06</span>
-      </div>
-    </div>
-  </div>
-  
-  <header class="page-header" id="block-0">
+  <ul class="nav nav-bar">
+    <li class="nav__block"><a class="block" href="#block-1">01</a></li>
+    <li class="nav__block"><a class="block" href="#block-2">02</a></li>
+    <li class="nav__block"><a class="block" href="#block-3">03</a></li>
+    <li class="nav__block"><a class="block" href="#block-4">04</a></li>
+    <li class="nav__block"><a class="block" href="#block-5">05</a></li>
+    <li class="nav__block"><a class="block" href="#block-6">06</a></li>
+  </ul>
+
+  <header class="page-header tracked" id="block-1">
     <div class="page-header__container">
       <nav class="main-nav">
         <div class="main-nav--border"></div>
@@ -48,10 +35,10 @@
           <div class="toggle-menu__item toggle-middle"></div>
           <div class="toggle-menu__item toggle-bottom"></div>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a href="#">Портфолио</a></li>
-            <li class="site-list__item"><a href="#block-2">Обо мне</a></li>
-            <li class="site-list__item"><a href="#block-3">Стоимость</a></li>
-            <li class="site-list__item"><a href="#block-4">Контакты</a></li>
+            <li class="site-list__item"><a href="#block-2">Портфолио</a></li>
+            <li class="site-list__item"><a href="#block-3">Обо мне</a></li>
+            <li class="site-list__item"><a href="#block-4">Стоимость</a></li>
+            <li class="site-list__item"><a href="#block-5">Контакты</a></li>
           </ul>
           <div class="overlay"></div>
         </div>
@@ -73,7 +60,7 @@
   <main class="page-main">
     <h1 class="visually-hidden">Фотограф и стилист Дарья Воронина</h1>
 
-    <section class="portfolio__container" id="block-1">
+    <section class="portfolio__container tracked" id="block-2">
       <div class="portfolio">
         <h2 class="portfolio__name">Портфолио</h2>
         <ul class="portfolio__list">
@@ -127,7 +114,9 @@
       </div>
     </section>
 
-    <section class="promo" id="block-2">
+    <section class="promo tracked" id="block-3">
+      <div class="promo__bg1"></div>
+      <div class="promo__bg2"></div>
       <h3>Обо мне</h3>
       <div class="promo__block">
         <picture class="promo__block--img-left">
@@ -142,16 +131,14 @@
         </picture>
       </div>
       <p class="promo__cite promo__cite--phrase-first">Во всех фотосъемках еды, я работаю как фуд-фотограф и
-        фуд-стилист. Создаю креативные
-        концепции, реализую
-        ваши идеи. Разрабатываю рецепты, вкусно снимаю. Провожу обучение</p>
+        фуд-стилист. Создаю креативные концепции, реализую ваши идеи. Разрабатываю рецепты, вкусно снимаю. Провожу обучение</p>
       <p class="promo__cite promo__cite--phrase">Всегда открыта к сотрудничеству и рада новым предложениям </p>
       <p class="promo__cite promo__cite--tel">Tel.: daria.voronina@gmail.com</p>
       <a class="promo__cite promo-phone" href="tel:+79166677112">Tel.: + 7 916 66 77 112</a>
       <button class="promo__cite--button button">Работать со мной</button>
     </section>
 
-    <section class="price" id="block-3">
+    <section class="price tracked" id="block-4">
       <h3 class="">Стоимость</h3>
       <ul class="price__list">
         <li class="price__item price__item--left">
@@ -199,7 +186,7 @@
     </section>
   </main>
 
-  <footer class="page-footer" id="block-4">
+  <footer class="page-footer tracked" id="block-5">
     <div class="page-footer__contacts contacts">
       <h3>Свяжитесь со мной</h3>
       <ul class="contact__list">
@@ -220,8 +207,7 @@
     <div class="page-footer__social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social-button" href="https://www.facebook.com">
-            <span class="visually-hidden">Фейсбук</span><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+          <a class="social-button" href="https://www.facebook.com"><span class="visually-hidden">Фейсбук</span><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;"
               xml:space="preserve">
               <path d="M0,0v242.667h242.667V0H0z M154.969,117.424H129.07v86.493h-28.342v-86.493H81.833V98.041h19.058V67.08
@@ -230,8 +216,7 @@
         </li>
         <li class="social__item">
           <a class="social-button" href="https://vk.com/feed">
-            <span class="visually-hidden">Инстаграм</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;"
+            <span class="visually-hidden">Инстаграм</span><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;"
               xml:space="preserve">
               <path d="M168.496,111.025h15.219v65.454c0,3.996-3.24,7.236-7.236,7.236H66.188c-3.996,0-7.236-3.24-7.236-7.236v-65.454h15.219
             	c-0.723,3.323-1.115,6.769-1.115,10.308c0,26.663,21.614,48.277,48.277,48.277c26.663,0,48.277-21.614,48.277-48.277
@@ -259,8 +244,7 @@
         </li>
         <li class="social__item">
           <a class="social-button" href="https://www.instagram.com">
-            <span class="visually-hidden">Pinterest</span>
-            <svg version="1.1" width="34" height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            <span class="visually-hidden">Pinterest</span><svg version="1.1" width="34" height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px" y="0px" viewBox="0 0 242.667 242.667" style="enable-background:new 0 0 242.667 242.667;"
               xml:space="preserve">
               <path d="M0,0v242.667h242.667V0H0z M155.336,148.425c-18.516,9.562-33.542,4.857-37.488,2.884c-3.946-1.973-7.285-6.678-7.285-6.678
@@ -276,89 +260,23 @@
     </div>
   </footer>
   <script src="js/jQuery.min.js"></script>
-  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/waypoints.min.js"></script>
   <script>
-    $('.block-1')
-        .waypoint(function (dir) {
-          if (dir === 'down')
-            $(this)
-              .removeClass('show');
-          else
-            $(this)
-              .addClass('show');
-        }, {
-            offset: -300
-          })
-      $('.block-2')
-      .waypoint(function (dir) {
-          if (dir === 'down')
-            $(this)
-              .addClass('show');
-          else
-            $(this)
-              .removeClass('show');
-        }, {
-            offset: -270
-          })
-        .waypoint(function (dir) {
-          if (dir === 'down')
-            $(this)
-              .removeClass('show');
-          else
-            $(this)
-              .addClass('show');
-        }, {
-            offset: -2300
-          })
-          
-      $('.block-3')
-      .waypoint(function (dir) {
-          if (dir === 'down')
-            $(this)
+    var navli = $('.nav li a');
+    $('.tracked').waypoint(function () {
+      var hash = $(this).attr('id');
 
-              .addClass('show');
-          else
-            $(this)
-              .removeClass('show');
-        }, {
-            offset: -2300
-          })
-        .waypoint(function (dir) {
-          if (dir === 'down')
-            $(this)
-              .removeClass('show');
-          else
-            $(this)
-              .addClass('show');
-        }, {
-            offset: -3200
-          })
+      navli.removeClass('show');
 
-          $('.block-4')
-              .waypoint(function (dir) {
-                if (dir === 'down')
-                  $(this)
+      $.each( navli, function() {
+        if ($(this).attr('href').slice(1) == hash) {
+          $(this).addClass('show')
+          }
+        });
+      },{
+        offset: '-1%'
+      });
 
-                    .addClass('show');
-                else
-                  $(this)
-                    .removeClass('show');
-              }, {
-                  offset: -3200
-                })
-              .waypoint(function (dir) {
-                if (dir === 'down')
-                  $(this)
-                    .removeClass('show');
-                else
-                  $(this)
-                    .addClass('show');
-              }, {
-                  offset: -3900
-                })
-
-          
   </script>
 
 </body>
