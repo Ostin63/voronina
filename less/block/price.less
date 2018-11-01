@@ -49,7 +49,17 @@
 @media @desktop-widths {
   .price {
     & h3 {
+      position: relative;
       font-size: 36px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 96px;
+        height: 74px;
+        top: -25px;
+        left: -500px;
+        background: url(../img/sheet-3.png) 0 0 no-repeat;
+      }
     }
     & .price__list {
       width: 1110px;

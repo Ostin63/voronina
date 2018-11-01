@@ -833,6 +833,15 @@ input[type="radio"].visually-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+.portfolio__bottom .portfolio__bottom--overlay::before {
+  content: "";
+  position: absolute;
+  bottom: -170px;
+  right: -150px;
+  width: 91px;
+  height: 75px;
+  background: url(../img/sheet-2.png) 0 0 no-repeat;
+}
 .portfolio__bottom .portfolio__bottom--overlay h3 {
   margin-bottom: 12px;
   font-size: 18px;
@@ -1407,6 +1416,10 @@ input[type="radio"].visually-hidden {
     color: #212021;
     background: none;
   }
+  .portfolio__bottom .portfolio__bottom--overlay::before {
+    top: 20px;
+    right: -300px;
+  }
   .portfolio__bottom .portfolio__bottom--overlay h3 {
     margin-top: 30px;
     font-size: 24px;
@@ -1476,15 +1489,6 @@ input[type="radio"].visually-hidden {
   }
   .promo .promo__block .promo__block--img-right {
     position: relative;
-  }
-  .promo .promo__block .promo__block--img-right::before {
-    content: "";
-    position: absolute;
-    top: -300px;
-    right: -60px;
-    width: 91px;
-    height: 75px;
-    background: url(../img/sheet-2.png) 0 0 no-repeat;
   }
   .promo .promo__block .promo__block--img-right::after {
     content: "";
@@ -1635,9 +1639,27 @@ input[type="radio"].visually-hidden {
     padding-bottom: 70px;
   }
   .contacts {
+    position: relative;
     margin-top: 56px;
   }
+  .contacts .contacts__sheet {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    width: 90px;
+    height: 77px;
+    background: url(../img/sheet-6.png) 0 0 no-repeat;
+  }
+  .contacts .contacts__sheet-right {
+    position: absolute;
+    top: -150px;
+    right: -50px;
+    width: 90px;
+    height: 75px;
+    background: url(../img/sheet-2.png) 0 0 no-repeat;
+  }
   .contacts h3 {
+    position: relative;
     font-size: 24px;
   }
   .contacts .contact__list {
@@ -1817,6 +1839,10 @@ input[type="radio"].visually-hidden {
     width: 317px;
     margin: 0 32px;
   }
+  .portfolio__container .portfolio .portfolio__list .portfolio__item:nth-child(2)::before {
+    top: -200px;
+    left: 250px;
+  }
   .portfolio__container .portfolio .portfolio__list .portfolio__item:nth-child(2) img {
     width: 317px;
     height: 396px;
@@ -1903,6 +1929,10 @@ input[type="radio"].visually-hidden {
     width: 660px;
     margin-left: -150px;
   }
+  .promo .promo__block .promo__block--img-right::after {
+    bottom: -180px;
+    right: -120px;
+  }
   .promo .promo__block .promo__block--img-right img {
     width: 316px;
     height: 431px;
@@ -1961,7 +1991,17 @@ input[type="radio"].visually-hidden {
             box-sizing: border-box;
   }
   .price h3 {
+    position: relative;
     font-size: 36px;
+  }
+  .price h3::after {
+    content: "";
+    position: absolute;
+    width: 96px;
+    height: 74px;
+    top: -25px;
+    left: -500px;
+    background: url(../img/sheet-3.png) 0 0 no-repeat;
   }
   .price .price__list {
     width: 1110px;
@@ -2028,7 +2068,7 @@ input[type="radio"].visually-hidden {
   }
   .page-footer {
     padding-top: 125px;
-    padding-bottom: 194px;
+    padding-bottom: 190px;
   }
   .contacts h3 {
     font-size: 36px;

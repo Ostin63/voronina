@@ -20,6 +20,15 @@
     left: 0;
     background: @background-overlay;
     box-sizing: border-box;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -170px;
+      right: -150px;
+      width: 91px;
+      height: 75px;
+      background: url(../img/sheet-2.png) 0 0 no-repeat;
+    }
     & h3 {
       margin-bottom: 12px;
       font-size: 18px;
@@ -94,6 +103,10 @@
       padding-right: 0;
       color: @black-text-color;
       background: none;
+      &::before {
+        top: 20px;
+        right: -300px;
+      }
       & h3 {
         margin-top: 30px;
         font-size: 24px;
