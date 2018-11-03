@@ -23,20 +23,18 @@
     background: @black-text-color;
   }
   &:hover {
-    color: @color-button-hover;
-    border-bottom: 2px solid @color-button-hover;
+    color: @white-text-color;
+    background: @background-overlay;
+    box-shadow: 0px 5px 15px 0 rgba(41, 52, 73, 0.5);
+    border-bottom: 2px solid @white-text-color;
     &::after {
-      background: @color-button-hover;
+      background: @white-text-color;
     }
   }
   &:focus {
     outline: none;
   }
   &:active {
-    color: @color-button-active;
-    border-bottom: 2px solid @color-button-active;
-    &::after {
-      background: @color-button-active;
-    }
+    box-shadow: 0px 2px 5px 0 rgba(41, 52, 73, 0.5);
   }
 }
