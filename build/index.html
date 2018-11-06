@@ -10,7 +10,7 @@
 </head>
 
 <body class="page-wrapper">
-  <ul class="nav nav-bar">
+  <ul class="nav nav-bar" hidden>
     <li class="nav__block"><a class="block" href="#block-1">01</a></li>
     <li class="nav__block"><a class="block" href="#block-2">02</a></li>
     <li class="nav__block"><a class="block" href="#block-3">03</a></li>
@@ -261,25 +261,9 @@
       </ul>
     </div>
   </footer>
-  <script src="js/jQuery.min.js"></script>
-  <script src="js/waypoints.min.js"></script>
-  <script>
-    var navli = $('.nav li a');
-    $('.tracked').waypoint(function () {
-      var hash = $(this).attr('id');
-
-      navli.removeClass('show');
-
-      $.each( navli, function() {
-        if ($(this).attr('href').slice(1) == hash) {
-          $(this).addClass('show')
-          }
-        });
-      },{
-        offset: '1%'
-      });
-
-  </script>
+  <script src="libs/jQuery.min.js"></script>
+  <script src="libs/jquery.waypoints.min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 

@@ -1,6 +1,11 @@
 var navli = $('.nav li a');
-$('.tracked').waypoint(function () {
-  var hash = $(this).attr('id');
+var waypoints = $('.tracked').waypoint(function (dir) {
+  var hash = this.element.id;
+  if(dir === 'up') {
+    var id = parseInt(hash.split('-')[1]);
+    if(id > 1) id--;
+    hash = [hash.split('-')[0], id].join('-');
+  }
 
   navli.removeClass('show');
 
@@ -9,6 +14,5 @@ $('.tracked').waypoint(function () {
       $(this).addClass('show')
     }
   });
-}, {
-    offset: '1%'
-  });
+});
+waypoints[0].options.offset = -1;

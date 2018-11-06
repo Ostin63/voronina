@@ -1,14 +1,1 @@
-var navli = $('.nav li a');
-$('.tracked').waypoint(function () {
-  var hash = $(this).attr('id');
-
-  navli.removeClass('show');
-
-  $.each(navli, function () {
-    if ($(this).attr('href').slice(1) == hash) {
-      $(this).addClass('show')
-    }
-  });
-}, {
-    offset: '1%'
-  });
+var navli=$(".nav li a"),waypoints=$(".tracked").waypoint(function(i){var a=this.element.id;if("up"===i){var s=parseInt(a.split("-")[1]);1<s&&s--,a=[a.split("-")[0],s].join("-")}navli.removeClass("show"),$.each(navli,function(){$(this).attr("href").slice(1)==a&&$(this).addClass("show")})});waypoints[0].options.offset=-1;

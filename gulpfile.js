@@ -10,16 +10,23 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const run = require("run-sequence");
 const del = require("del");
+const uglify = require("gulp-uglify")
 
 gulp.task("clean", function () {
   return del("build");
+});
+
+gulp.task("js", function () {
+  return gulp.src("js/**")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("copy", function () {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
     "img/**",
-    "js/**",
+    "libs/**",
     "*.html"
   ], {
       base: "."
@@ -28,7 +35,7 @@ gulp.task("copy", function () {
 });
 
 gulp.task("style", function () {
-  gulp.src("less/style.less")
+  return gulp.src("less/style.less")
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -71,9 +78,10 @@ gulp.task("serve", function () {
   server.init({ server: "build/", notify: false, open: true, cors: true, ui: false});
 
   gulp.watch("less/**/*.less", ["style"]);
+  gulp.watch("js/**/*.js", ["js"]);
   gulp.watch("*.html", ["html:update"]);
 });
 
 gulp.task("build", function (done) {
-  run( "clean", "copy", "style", "images", done);
+  run( "clean", "copy", "js", "style", "images", done);
 });
