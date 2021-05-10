@@ -1,5 +1,5 @@
 .contacts {
-  & h3 {
+  h3 {
     position: relative;
     font-size: 18px;
     .text-semibold();
@@ -13,20 +13,20 @@
       background: @color-line;
     }
   }
-  & .contact__list {
+  .contact__list {
     padding-left: 0;
     .contact__item {
       list-style: none;
       display: flex;
       flex-direction: column;
       align-items: center;
-      & p {
+      p {
         display: flex;
         align-items: flex-end;
         font-size: 14px;
         .text-semibold();
         color: @black-text-color;
-        & span {
+        span {
           width: 2px;
           height: 20px;
           margin: 3px;
@@ -36,7 +36,7 @@
             margin-left: 15px;
           }
         }
-        & a {
+        a {
           display: block;
           margin-left: 10px;
           color: @black-text-color;
@@ -50,7 +50,7 @@
   .contacts {
     position: relative;
     margin-top: 56px;
-    & .contacts__sheet {
+    .contacts__sheet {
       position: absolute;
       top: 50px;
       left: 20px;
@@ -58,7 +58,7 @@
       height: 77px;
       background: url(../img/sheet-6.png) 0 0 no-repeat;
     }
-    & .contacts__sheet-right {
+    .contacts__sheet-right {
       position: absolute;
       top: -150px;
       right: -50px;
@@ -66,13 +66,13 @@
       height: 75px;
       background: url(../img/sheet-2.png) 0 0 no-repeat;
     }
-    & h3 {
+    h3 {
       position: relative;
       font-size: 24px;
     }
-    & .contact__list {
+    .contact__list {
       margin-bottom: 41px;
-      & p {
+      p {
         font-size: 16px;
       }
     }
@@ -81,10 +81,10 @@
 
 @media @desktop-widths {
   .contacts {
-    & h3 {
+    h3 {
       font-size: 36px;
     }
-    & .contact__list {
+    .contact__list {
       width: 1000px;
       display: flex;
       flex-direction: row;

@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    & h2 {
+    h2 {
       position: relative;
       font-size: 18px;
       .text-semibold();
@@ -24,25 +24,25 @@
         background: @color-line;
       }
     }
-    & .portfolio__list {
+    .portfolio__list {
       padding-left: 0;
-      & .portfolio__item {
+      .portfolio__item {
         display: flex;
         flex-direction: column;
         list-style: none;
-        & .portfolio__item--img {
+        .portfolio__item--img {
           width: 290px;
           height: 374px;
           order: 1;
         }
-        & p {
+        p {
           width: 290px;
           margin-top: 10px;
           margin-bottom: 70px;
           .text-semibold();
           order: 3;
         }
-        & a {
+        a {
           display: block;
           margin-top: 20px;
           font-size: 12px;
@@ -57,11 +57,11 @@
 
 @media @tablet-widths {
   .portfolio__container {
-    & .portfolio {
-      & h2 {
+    .portfolio {
+      h2 {
         font-size: 24px;
       }
-      & .portfolio__list {
+      .portfolio__list {
         width: 644px;
         margin-top: 42px;
         display: flex;
@@ -69,7 +69,7 @@
         justify-content: center;
         flex-wrap: wrap;
         align-items: flex-start;
-        & .portfolio__item {
+        .portfolio__item {
           &:nth-child(1) {
             position: relative;
             width: 240px;
@@ -83,11 +83,11 @@
               left: -50px;
               background: url(../img/sheet-7.png) 0 0 no-repeat;
             }
-            & img {
+            img {
               width: 240px;
               height: 376px;
             }
-            & p {
+            p {
               width: 240px;
             }
           }
@@ -104,11 +104,11 @@
               left: 130px;
               background: url(../img/sheet-4.png) 0 0 no-repeat;
             }
-            & img {
+            img {
               width: 184px;
               height: 229px;
             }
-            & p {
+            p {
               width: 184px;
             }
           }
@@ -118,11 +118,11 @@
             margin-top: -220px;
             margin-bottom: 168px;
             order: 4;
-            & img {
+            img {
               width: 184px;
               height: 236px;
             }
-            & p {
+            p {
               width: 184px;
             }
           }
@@ -140,19 +140,19 @@
               right: -40px;
               background: url(../img/sheet-3.png) 0 0 no-repeat;
             }
-            & img {
+            img {
               width: 181px;
               height: 291px;
             }
-            & p {
+            p {
               width: 181px;
             }
           }
-          & p {
+          p {
             margin-bottom: 0;
             font-size: 16px;
           }
-          & a {
+          a {
             font-size: 11px;
           }
         }
@@ -163,37 +163,37 @@
 
 @media @desktop-widths {
   .portfolio__container {
-    & .portfolio {
-      & h2 {
+    .portfolio {
+      h2 {
         font-size: 36px;
       }
-      & .portfolio__list {
+      .portfolio__list {
         width: 1110px;
         margin-top: 64px;
         flex-direction: row;
-        & .portfolio__item {
+        .portfolio__item {
           &:nth-child(1) {
             width: 414px;
-            & img {
+            img {
               width: 414px;
               height: 648px;
             }
-            & p {
+            p {
               width: 414px;
             }
           }
           &:nth-child(2) {
             width: 317px;
             margin: 0 32px;
-            &::before{
+            &::before {
               top: -200px;
-              left:250px;
+              left: 250px;
             }
-            & img {
+            img {
               width: 317px;
               height: 396px;
             }
-            & p {
+            p {
               width: 317px;
             }
           }
@@ -201,29 +201,29 @@
             width: 317px;
             margin-left: 97px;
             margin-top: -280px;
-            & img {
+            img {
               width: 317px;
               height: 408px;
             }
-            & p {
+            p {
               width: 317px;
             }
           }
           &:nth-child(4) {
             width: 315px;
-            & img {
+            img {
               width: 315px;
               height: 495px;
             }
-            & p {
+            p {
               width: 317px;
             }
           }
-          & p {
+          p {
             margin-bottom: 0;
             font-size: 18px;
           }
-          & a {
+          a {
             font-size: 14px;
           }
         }

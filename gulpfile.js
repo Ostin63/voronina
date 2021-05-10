@@ -1,87 +1,118 @@
-const gulp = require("gulp");
-const less = require("gulp-less");
+const { src, dest, watch, series, parallel } = require("gulp");
 const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const server = require("browser-sync").create();
-const mqpacker = require("css-mqpacker");
-const cssminify = require("gulp-csso");
+const csso = require("postcss-csso");
 const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
-const run = require("run-sequence");
 const del = require("del");
-const uglify = require("gulp-uglify")
+const sync = require("browser-sync").create();
 
-gulp.task("clean", function () {
-  return del("build");
-});
-
-gulp.task("js", function () {
-  return gulp.src("js/**")
-    .pipe(uglify())
-    .pipe(gulp.dest("build/js"));
-});
-
-gulp.task("copy", function () {
-  return gulp.src([
-    "fonts/**/*.{woff,woff2}",
-    "img/**",
-    "libs/**",
-    "*.html"
-  ], {
-      base: "."
-    })
-    .pipe(gulp.dest("build"));
-});
-
-gulp.task("style", function () {
-  return gulp.src("less/style.less")
+const styles = () => {
+  return src("source/less/style.less")
     .pipe(plumber())
+    .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer({
-        browsers: [
-          "last 2 versions"
-        ]
-      }),
-      mqpacker({
-        sort: true
-      })
+      autoprefixer(),
+      csso()
     ]))
-    .pipe(gulp.dest("build/css"))
-    .pipe(cssminify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
-});
+    .pipe(sourcemap.write("."))
+    .pipe(dest("build/css"))
+    .pipe(sync.stream());
+}
 
-gulp.task("images", function () {
-  return gulp.src("build/img/*.{png,jpg}")
+exports.styles = styles;
+
+const html = () => {
+  return src("source/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(dest("build"));
+}
+
+const scripts = () => {
+  return src("source/js/*.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(dest('build/js'))
+    .pipe(sync.stream())
+}
+
+exports.scripts = scripts;
+
+const images = () => {
+  return src("source/img/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.jpegtran({ progressive: true })
+      imagemin.mozjpeg({
+        progressive: true
+      }),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"));
-});
+    .pipe(dest("build/img"))
+}
+exports.images = images;
 
-gulp.task("html:copy", function () {
-  return gulp.src("*.html")
-    .pipe(gulp.dest("build"));
-});
-
-gulp.task("html:update", ["html:copy"], function (done) {
-  server.reload();
+const copy = (done) => {
+  src([
+    "source/fonts/*.{woff2,woff}",
+    "source/libs/*.js"
+  ], {
+    base: "source"
+  })
+    .pipe(dest("build"))
   done();
-});
+}
+exports.copy = copy;
 
-gulp.task("serve", function () {
-  server.init({ server: "build/", notify: false, open: true, cors: true, ui: false});
+const clean = () => {
+  return del("build");
+};
 
-  gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("js/**/*.js", ["js"]);
-  gulp.watch("*.html", ["html:update"]);
-});
+const server = (done) => {
+  sync.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+exports.server = server;
 
-gulp.task("build", function (done) {
-  run( "clean", "copy", "js", "style", "images", done);
-});
+const reload = done => {
+  sync.reload();
+  done();
+}
+
+const watcher = () => {
+  watch("source/less/**/*.less", series(styles));
+  watch("source/js/*.js", series(scripts));
+  watch("source/*.html", series(html, reload));
+}
+
+exports.default = series(
+  clean,
+  copy,
+  parallel(
+    styles,
+    html,
+    scripts,
+    images
+  ),
+  series(
+    server,
+    watcher
+  )
+);

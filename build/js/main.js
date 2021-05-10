@@ -1,1 +1,0 @@
-var navli=$(".nav li a"),waypoints=$(".tracked").waypoint(function(i){var a=this.element.id;if("up"===i){var s=parseInt(a.split("-")[1]);1<s&&s--,a=[a.split("-")[0],s].join("-")}navli.removeClass("show"),$.each(navli,function(){$(this).attr("href").slice(1)==a&&$(this).addClass("show")})});waypoints[0].options.offset=-1;
