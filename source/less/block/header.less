@@ -1,0 +1,137 @@
+.header {
+  background: url(../img/daria-mobil.jpg) 50% 50% no-repeat;
+}
+
+.header__container {
+  .container();
+  padding-bottom: 133px;
+  background: @background-overlay;
+}
+
+.header__nav {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 155px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  margin-top: 0px;
+  margin-right: 160px;
+  z-index: 3;
+}
+
+.header__logo-img {
+  width: 112px;
+  height: 33px;
+}
+
+.header__border {
+  position: absolute;
+  content: "";
+  width: 288px;
+  height: 315px;
+  top: 100px;
+  left: 0;
+  border-right: 6px solid @green-text-color;
+  border-top: 6px solid @green-text-color;
+  border-bottom: 6px solid @green-text-color;
+}
+
+.header__menu {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.header__phone {
+  display: none;
+  font-size: 18px;
+  .text-semibold();
+  color: @black-text-color;
+}
+
+@media @tablet-widths {
+  .header {
+    background: @background-dekstop;
+  }
+
+  .header__container {
+    background: url(../img/header-tablet.png) 100% 50% no-repeat;
+  }
+
+  .header__nav {
+    margin-bottom: 280px;
+  }
+
+  .header__border {
+    width: 208px;
+    height: 634px;
+    top: 100px;
+    left: 75%;
+    border-right: none;
+    border-left: 10px solid @green-text-color;
+    border-top: 10px solid @green-text-color;
+    border-bottom: 10px solid @green-text-color;
+  }
+
+  .page-header__logo {
+    margin-top: 0px;
+    margin-left: -60px;
+    z-index: 3;
+  }
+
+  .header__logo-img {
+    width: 201px;
+    height: 60px;
+  }
+
+  .header__phone {
+    display: inline-block;
+    color: #3b3b3b;
+  }
+
+}
+
+@media @desktop-widths {
+  .header__container {
+    padding: 0;
+    background: url(../img/header-dekstop.png) 100% 0 no-repeat;
+  }
+
+  .header__nav {
+    width: 1050px;
+    margin-bottom: 230px;
+  }
+
+  .header__border {
+    width: 605px;
+    height: 632px;
+    top: 100px;
+    left: 72%;
+    border-right: 10px solid @green-text-color;
+    border-left: 10px solid @green-text-color;
+    border-top: 10px solid @green-text-color;
+    border-bottom: 10px solid @green-text-color;
+  }
+
+  .header__logo {
+    margin-left: 0;
+  }
+
+  .header__logo-img {
+    width: 254px;
+    height: 76px;
+  }
+
+  .header__phone {
+    display: inline-block;
+    color: #878787;
+  }
+}

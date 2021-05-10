@@ -16,28 +16,19 @@ var waypoints = $('.tracked').waypoint(function (dir) {
   });
 });
 waypoints[0].options.offset = -1;
-/*
-$(document).ready(function () {
-  $('.toggle-menu__list').on('click', function () {
-    $('.toggle-top').toggle('show');
-    $('.toggle-middle').toggle('show');
-    $('.toggle-bottom').toggle('show');
-    $('.main-nav__list').toggle('show');
-    $('.overlay').toggle('show');
-  })
-});
-*/
-const toggleMenu = document.querySelector('.toggle-menu__list');
-const siteList = document.querySelector('.site-list');
+
+const toggleMenu = document.querySelector('.toggle-menu__wrapper');
+const siteList = document.querySelector('.toggle-menu__nav-list');
 const overlay = document.querySelector('.overlay');
-const toggleTop = document.querySelector('.toggle-top');
-const toggleMiddle = document.querySelector('.toggle-middle');
-const toggleBottom = document.querySelector('.toggle-bottom');
+const toggleTop = document.querySelector('.toggle-menu__item--top');
+const toggleMiddle = document.querySelector('.toggle-menu__item--middle');
+const toggleBottom = document.querySelector('.toggle-menu__item--bottom');
 
 toggleMenu.addEventListener("click", function () {
   toggleTop.classList.toggle("show-top");
   toggleMiddle.classList.toggle("show-middle");
   toggleBottom.classList.toggle("show-bottom");
+  toggleMenu.classList.toggle("toggle-menu__wrapper--show");
   siteList.classList.toggle("active");
   overlay.classList.toggle("active");
 });
