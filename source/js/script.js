@@ -30,5 +30,4 @@ toggleMenu.addEventListener("click", function () {
   toggleBottom.classList.toggle("show-bottom");
   toggleMenu.classList.toggle("toggle-menu__wrapper--show");
   siteList.classList.toggle("active");
-  overlay.classList.toggle("active");
 });
